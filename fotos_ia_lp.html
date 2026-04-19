@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fotos Profissionais com IA — @tharssys</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5F0E8;
+    --dark: #0E0E0E;
+    --mid: #1A1A1A;
+    --accent: #C8A96E;
+    --accent-light: #E8D5A8;
+    --gray: #888;
+    --light-border: rgba(200,169,110,0.2);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NOISE TEXTURE */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  section, nav, footer { position: relative; z-index: 1; }
+
+  /* NAV */
+  nav {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-border);
+    position: sticky;
+    top: 0;
+    background: rgba(14,14,14,0.92);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-cta {
+    background: var(--accent);
+    color: var(--dark);
+    padding: 0.6rem 1.4rem;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--accent-light); }
+
+  /* HERO */
+  .hero {
+    min-height: 92vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: center;
+    padding: 6rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-text { padding-right: 4rem; }
+
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    line-height: 1.08;
+    font-weight: 900;
+    color: var(--cream);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-headline em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    color: rgba(245,240,232,0.6);
+    margin-bottom: 2.5rem;
+    max-width: 420px;
+    line-height: 1.8;
+  }
+
+  .hero-cta-group { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--dark);
+    padding: 1rem 2rem;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
+
+  .btn-ghost {
+    color: rgba(245,240,232,0.5);
+    font-size: 0.85rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.2s;
+  }
+
+  .btn-ghost:hover { color: var(--cream); }
+
+  .hero-proof {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--light-border);
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .proof-item {}
+  .proof-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .proof-label { font-size: 0.78rem; color: rgba(245,240,232,0.45); margin-top: 0.3rem; letter-spacing: 0.04em; }
+
+  /* HERO VISUAL */
+  .hero-visual {
+    position: relative;
+    height: 580px;
+  }
+
+  .photo-stack {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .photo-card {
+    position: absolute;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 32px 64px rgba(0,0,0,0.6);
+  }
+
+  .photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .photo-card-1 { width: 55%; height: 72%; top: 0; right: 0; }
+  .photo-card-2 { width: 48%; height: 55%; bottom: 0; left: 0; border: 1px solid var(--light-border); }
+
+  .photo-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--dark);
+    border: 1px solid var(--accent);
+    padding: 0.6rem 1.2rem;
+    border-radius: 2px;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    white-space: nowrap;
+    z-index: 10;
+  }
+
+  /* PLACEHOLDER PHOTOS */
+  .photo-placeholder {
+    background: var(--mid);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .photo-placeholder span {
+    font-size: 0.7rem;
+    color: var(--gray);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .photo-placeholder .icon {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(136,136,136,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* DOR SECTION */
+  .section-dor {
+    padding: 6rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.2rem;
+  }
+
+  .dor-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+    color: var(--cream);
+  }
+
+  .dor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--light-border);
+    border: 1px solid var(--light-border);
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+
+  .dor-item {
+    background: var(--mid);
+    padding: 1.5rem 1.8rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .dor-icon {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-top: 0.55rem;
+    flex-shrink: 0;
+  }
+
+  .dor-text { font-size: 0.9rem; color: rgba(245,240,232,0.7); line-height: 1.6; }
+
+  .dor-footer {
+    font-size: 1rem;
+    color: rgba(245,240,232,0.5);
+    line-height: 1.8;
+  }
+
+  .dor-footer strong { color: var(--cream); font-weight: 500; }
+
+  /* GALERIA */
+  .section-galeria {
+    padding: 6rem 2rem;
+    background: var(--mid);
+    border-top: 1px solid var(--light-border);
+    border-bottom: 1px solid var(--light-border);
+  }
+
+  .galeria-header {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .galeria-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700;
+    max-width: 480px;
+    line-height: 1.2;
+  }
+
+  .galeria-note {
+    font-size: 0.8rem;
+    color: rgba(245,240,232,0.35);
+    text-align: right;
+    max-width: 200px;
+    line-height: 1.6;
+  }
+
+  .galeria-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .galeria-item {
+    aspect-ratio: 3/4;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    background: #222;
+  }
+
+  .galeria-item:nth-child(2) { margin-top: 2rem; }
+  .galeria-item:nth-child(4) { margin-top: -1.5rem; }
+
+  .galeria-item .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(14,14,14,0.7) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+  }
+
+  .galeria-item:hover .overlay { opacity: 1; }
+
+  .galeria-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(14,14,14,0.8);
+    padding: 0.3rem 0.6rem;
+    border-radius: 2px;
+  }
+
+  .galeria-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: #1c1c1c;
+    border: 1px solid rgba(200,169,110,0.08);
+  }
+
+  .galeria-placeholder .ph-label {
+    font-size: 0.65rem;
+    color: rgba(200,169,110,0.3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .galeria-placeholder .ph-area {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(200,169,110,0.15);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* COMO FUNCIONA */
+  .section-como {
+    padding: 7rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .como-header { text-align: center; margin-bottom: 5rem; }
+
+  .como-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .como-sub { font-size: 0.9rem; color: rgba(245,240,232,0.45); }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--light-border);
+    border: 1px solid var(--light-border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+  }
+
+  .step {
+    background: var(--mid);
+    padding: 2.5rem 2rem;
+    position: relative;
+  }
+
+  .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: rgba(200,169,110,0.12);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .step-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 0.6rem;
+  }
+
+  .step-desc { font-size: 0.85rem; color: rgba(245,240,232,0.5); line-height: 1.7; }
+
+  .prazo-bar {
+    background: var(--mid);
+    border: 1px solid var(--light-border);
+    border-radius: 4px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .prazo-bar .prazo-label { font-size: 0.8rem; color: rgba(245,240,232,0.4); letter-spacing: 0.08em; text-transform: uppercase; }
+  .prazo-bar .prazo-val { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+  .prazo-divider { width: 1px; height: 32px; background: var(--light-border); }
+
+  /* PLANOS */
+  .section-planos {
+    padding: 7rem 2rem;
+    background: var(--mid);
+    border-top: 1px solid var(--light-border);
+  }
+
+  .planos-header { text-align: center; margin-bottom: 4rem; }
+
+  .planos-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .planos-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    align-items: start;
+  }
+
+  .plano-card {
+    background: var(--dark);
+    border: 1px solid rgba(200,169,110,0.15);
+    border-radius: 4px;
+    padding: 2rem 1.5rem;
+    transition: border-color 0.2s;
+  }
+
+  .plano-card:hover { border-color: rgba(200,169,110,0.4); }
+
+  .plano-card.featured {
+    border-color: var(--accent);
+    position: relative;
+    margin-top: -0.5rem;
+  }
+
+  .plano-badge {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: var(--dark);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0 0 3px 3px;
+    white-space: nowrap;
+  }
+
+  .plano-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 0.3rem;
+    margin-top: 0.5rem;
+  }
+
+  .plano-card.featured .plano-name { color: var(--accent); }
+
+  .plano-price {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.02em;
+  }
+
+  .plano-per { font-size: 0.72rem; color: var(--gray); margin-bottom: 1.5rem; }
+
+  .plano-divider { height: 1px; background: var(--light-border); margin-bottom: 1.2rem; }
+
+  .plano-features { list-style: none; margin-bottom: 2rem; }
+
+  .plano-features li {
+    font-size: 0.82rem;
+    color: rgba(245,240,232,0.6);
+    padding: 0.35rem 0;
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+
+  .plano-features li::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-top: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .plano-cta {
+    display: block;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: all 0.2s;
+    border: 1px solid rgba(200,169,110,0.3);
+    color: var(--accent);
+  }
+
+  .plano-cta:hover { background: rgba(200,169,110,0.08); }
+
+  .plano-card.featured .plano-cta {
+    background: var(--accent);
+    color: var(--dark);
+    border-color: var(--accent);
+  }
+
+  .plano-card.featured .plano-cta:hover { background: var(--accent-light); }
+
+  /* PARA QUEM */
+  .section-paraquem {
+    padding: 7rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .paraquem-header { text-align: center; margin-bottom: 4rem; }
+
+  .paraquem-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700;
+  }
+
+  .paraquem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .paraquem-card {
+    border: 1px solid var(--light-border);
+    border-radius: 4px;
+    padding: 1.8rem;
+    background: var(--mid);
+  }
+
+  .paraquem-icon {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--light-border);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .paraquem-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+  }
+
+  .paraquem-desc { font-size: 0.8rem; color: rgba(245,240,232,0.45); line-height: 1.7; }
+
+  /* DEPOIMENTOS */
+  .section-depo {
+    padding: 7rem 2rem;
+    background: var(--mid);
+    border-top: 1px solid var(--light-border);
+  }
+
+  .depo-header { text-align: center; margin-bottom: 4rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+  .depo-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .depo-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .depo-card {
+    background: var(--dark);
+    border: 1px solid var(--light-border);
+    border-radius: 4px;
+    padding: 2rem;
+  }
+
+  .depo-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.75rem;
+  }
+
+  .depo-text {
+    font-size: 0.88rem;
+    color: rgba(245,240,232,0.65);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  .depo-author { display: flex; align-items: center; gap: 0.75rem; }
+
+  .depo-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(200,169,110,0.15);
+    border: 1px solid var(--light-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .depo-name { font-size: 0.82rem; font-weight: 500; color: var(--cream); }
+  .depo-role { font-size: 0.72rem; color: var(--gray); }
+
+  /* CTA FINAL */
+  .section-cta-final {
+    padding: 8rem 2rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .cta-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-sub {
+    font-size: 0.95rem;
+    color: rgba(245,240,232,0.5);
+    margin-bottom: 3rem;
+    line-height: 1.8;
+  }
+
+  .cta-btn-wrap { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-large {
+    background: var(--accent);
+    color: var(--dark);
+    padding: 1.1rem 2.5rem;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .btn-large:hover { background: var(--accent-light); transform: translateY(-2px); }
+
+  .cta-note { font-size: 0.75rem; color: rgba(245,240,232,0.25); margin-top: 1.5rem; letter-spacing: 0.04em; }
+
+  /* FOOTER */
+  footer {
+    padding: 2.5rem 2rem;
+    border-top: 1px solid var(--light-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--accent);
+  }
+
+  .footer-copy { font-size: 0.75rem; color: rgba(245,240,232,0.2); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+  .hero-headline { animation: fadeUp 0.6s 0.1s ease both; }
+  .hero-sub { animation: fadeUp 0.6s 0.2s ease both; }
+  .hero-cta-group { animation: fadeUp 0.6s 0.3s ease both; }
+  .hero-proof { animation: fadeUp 0.6s 0.4s ease both; }
+  .hero-visual { animation: fadeUp 0.8s 0.2s ease both; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; padding: 4rem 1.5rem 3rem; min-height: auto; }
+    .hero-text { padding-right: 0; margin-bottom: 3rem; }
+    .hero-visual { height: 380px; }
+    .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+    .planos-grid { grid-template-columns: repeat(2, 1fr); }
+    .steps-grid { grid-template-columns: 1fr; }
+    .paraquem-grid { grid-template-columns: 1fr; }
+    .depo-grid { grid-template-columns: 1fr; }
+    .dor-grid { grid-template-columns: 1fr; }
+    .galeria-item:nth-child(2), .galeria-item:nth-child(4) { margin: 0; }
+  }
+
+  @media (max-width: 580px) {
+    .planos-grid { grid-template-columns: 1fr; }
+    nav { padding: 1rem 1.5rem; }
+    .footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">tharssys</div>
+  <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20saber%20mais%20sobre%20as%20fotos%20com%20IA" class="nav-cta" target="_blank">Quero minhas fotos →</a>
+</nav>
+
+<!-- HERO -->
+<section>
+  <div class="hero">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Fotos profissionais com IA</div>
+      <h1 class="hero-headline">Sua imagem profissional,<br><em>sem fotógrafo.</em></h1>
+      <p class="hero-sub">Fotos que elevam sua presença no digital — criadas com IA a partir das suas próprias fotos. Sem ensaio, sem estúdio, sem deslocamento. Em até 48 horas.</p>
+      <div class="hero-cta-group">
+        <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20saber%20mais%20sobre%20as%20fotos%20com%20IA" class="btn-primary" target="_blank">Falar no WhatsApp →</a>
+        <a href="#planos" class="btn-ghost">Ver planos ↓</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item">
+          <div class="proof-num">48h</div>
+          <div class="proof-label">Prazo de entrega</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">+10</div>
+          <div class="proof-label">Profissionais atendidos</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">4K</div>
+          <div class="proof-label">Resolução máxima</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="photo-stack">
+        <div class="photo-card photo-card-1">
+          <div class="photo-placeholder">
+            <div class="icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(136,136,136,0.5)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            </div>
+            <span>Foto gerada com IA</span>
+          </div>
+        </div>
+        <div class="photo-card photo-card-2">
+          <div class="photo-placeholder">
+            <div class="icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(136,136,136,0.5)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            </div>
+            <span>Foto gerada com IA</span>
+          </div>
+        </div>
+        <div class="photo-badge">Geradas com IA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOR -->
+<section class="section-dor">
+  <div class="section-label">O problema que todo profissional sente</div>
+  <h2 class="dor-headline">Se você usa sua imagem para vender,<br>provavelmente já sentiu isso</h2>
+  <div class="dor-grid">
+    <div class="dor-item">
+      <div class="dor-icon"></div>
+      <div class="dor-text">Suas fotos acabam rápido e você fica repetindo as mesmas imagens</div>
+    </div>
+    <div class="dor-item">
+      <div class="dor-icon"></div>
+      <div class="dor-text">Falta variedade para criar conteúdo com consistência</div>
+    </div>
+    <div class="dor-item">
+      <div class="dor-icon"></div>
+      <div class="dor-text">Um novo ensaio fotográfico nem sempre compensa — é logística, custo e tempo</div>
+    </div>
+    <div class="dor-item">
+      <div class="dor-icon"></div>
+      <div class="dor-text">Sua imagem atual não acompanha o nível do serviço que você entrega</div>
+    </div>
+  </div>
+  <p class="dor-footer">Hoje existe uma forma de ter fotos profissionais com <strong>mais praticidade, sem perder qualidade</strong> — e sem depender de nenhum fotógrafo.</p>
+</section>
+
+<!-- GALERIA -->
+<section class="section-galeria" id="resultados">
+  <div class="galeria-header">
+    <h2 class="galeria-headline">Resultados reais.<br>Gerados com IA.</h2>
+    <div class="galeria-note">Todas as fotos abaixo foram criadas com IA a partir de fotos enviadas pelos clientes</div>
+  </div>
+  <div class="galeria-grid">
+    <div class="galeria-item">
+      <div class="galeria-placeholder">
+        <div class="ph-area">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.25)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        </div>
+        <span class="ph-label">Sua foto aqui</span>
+      </div>
+      <div class="overlay"><span class="galeria-tag">Executivo</span></div>
+    </div>
+    <div class="galeria-item">
+      <div class="galeria-placeholder">
+        <div class="ph-area">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.25)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        </div>
+        <span class="ph-label">Sua foto aqui</span>
+      </div>
+      <div class="overlay"><span class="galeria-tag">Studio</span></div>
+    </div>
+    <div class="galeria-item">
+      <div class="galeria-placeholder">
+        <div class="ph-area">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.25)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        </div>
+        <span class="ph-label">Sua foto aqui</span>
+      </div>
+      <div class="overlay"><span class="galeria-tag">Casual</span></div>
+    </div>
+    <div class="galeria-item">
+      <div class="galeria-placeholder">
+        <div class="ph-area">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.25)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        </div>
+        <span class="ph-label">Sua foto aqui</span>
+      </div>
+      <div class="overlay"><span class="galeria-tag">Editorial</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section-como" id="como-funciona">
+  <div class="como-header">
+    <div class="section-label">Processo</div>
+    <h2 class="como-headline">Tudo funciona em 3 passos</h2>
+    <p class="como-sub">Simples, rápido e sem complicação</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-title">Você envia suas fotos</div>
+      <div class="step-desc">Após o pagamento, você recebe um formulário simples. Envia algumas fotos suas como referência — pode ser selfie, com boa iluminação, sem filtro. Leva menos de 5 minutos.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-title">Escolhe os melhores resultados</div>
+      <div class="step-desc">Você recebe um PDF com as fotos geradas para aprovação. Escolhe as que mais gostou — você tem controle sobre o resultado final.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-title">Recebe tudo no drive</div>
+      <div class="step-desc">As fotos aprovadas são entregues via Google Drive, em alta resolução, prontas para usar em qualquer plataforma.</div>
+    </div>
+  </div>
+  <div class="prazo-bar">
+    <div>
+      <div class="prazo-label">Prazo de entrega</div>
+      <div class="prazo-val">Até 48 horas</div>
+    </div>
+    <div class="prazo-divider"></div>
+    <div>
+      <div class="prazo-label">Formato</div>
+      <div class="prazo-val">2K e 4K</div>
+    </div>
+    <div class="prazo-divider"></div>
+    <div>
+      <div class="prazo-label">Entrega</div>
+      <div class="prazo-val">Google Drive</div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section class="section-planos" id="planos">
+  <div class="planos-header">
+    <div class="section-label">Planos</div>
+    <h2 class="planos-headline">Faça sua escolha</h2>
+  </div>
+  <div class="planos-grid">
+
+    <div class="plano-card">
+      <div class="plano-name">Iniciante</div>
+      <div class="plano-price">R$ 99,90</div>
+      <div class="plano-per">R$ 19,98 por foto</div>
+      <div class="plano-divider"></div>
+      <ul class="plano-features">
+        <li>5 fotos profissionais com IA</li>
+        <li>Estilo Studio profissional</li>
+        <li>Fotos em 2K</li>
+        <li>Entrega em até 48h</li>
+      </ul>
+      <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20o%20plano%20Iniciante%20por%20R%2499%2C90" class="plano-cta" target="_blank">Quero este plano</a>
+    </div>
+
+    <div class="plano-card">
+      <div class="plano-name">Profissional</div>
+      <div class="plano-price">R$ 247,90</div>
+      <div class="plano-per">R$ 24,79 por foto</div>
+      <div class="plano-divider"></div>
+      <ul class="plano-features">
+        <li>10 fotos profissionais com IA</li>
+        <li>1 estilo principal de foto</li>
+        <li>Fotos em 2K</li>
+        <li>Entrega em até 48h</li>
+      </ul>
+      <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20o%20plano%20Profissional%20por%20R%24247%2C90" class="plano-cta" target="_blank">Quero este plano</a>
+    </div>
+
+    <div class="plano-card featured">
+      <div class="plano-badge">Recomendado</div>
+      <div class="plano-name">Mentor</div>
+      <div class="plano-price">R$ 397,90</div>
+      <div class="plano-per">R$ 23,35 por foto</div>
+      <div class="plano-divider"></div>
+      <ul class="plano-features">
+        <li>17 fotos profissionais com IA</li>
+        <li>Até 3 estilos de fotos</li>
+        <li>Fotos em 2K e 4K</li>
+        <li>Entrega em até 48h</li>
+      </ul>
+      <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20o%20plano%20Mentor%20por%20R%24397%2C90" class="plano-cta" target="_blank">Quero este plano</a>
+    </div>
+
+    <div class="plano-card">
+      <div class="plano-name">Expert</div>
+      <div class="plano-price">R$ 897,90</div>
+      <div class="plano-per">banco de imagens estratégico</div>
+      <div class="plano-divider"></div>
+      <ul class="plano-features">
+        <li>28 fotos profissionais com IA</li>
+        <li>5 estilos de foto</li>
+        <li>Fotos em 2K e 4K</li>
+        <li>Fotos organizadas por função de uso</li>
+        <li>PDF de direcionamento estratégico</li>
+      </ul>
+      <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20o%20plano%20Expert%20por%20R%24897%2C90" class="plano-cta" target="_blank">Quero este plano</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section class="section-paraquem">
+  <div class="paraquem-header">
+    <div class="section-label">Para quem é</div>
+    <h2 class="paraquem-headline">Ideal para quem usa a imagem para vender</h2>
+  </div>
+  <div class="paraquem-grid">
+    <div class="paraquem-card">
+      <div class="paraquem-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.6)" stroke-width="1.5"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      </div>
+      <div class="paraquem-title">Profissionais liberais</div>
+      <div class="paraquem-desc">Advogados, dentistas, psicólogos, médicos, consultores — que precisam transmitir credibilidade antes mesmo da conversa.</div>
+    </div>
+    <div class="paraquem-card">
+      <div class="paraquem-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.6)" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      </div>
+      <div class="paraquem-title">Criadores e mentores</div>
+      <div class="paraquem-desc">Infoprodutores, coaches e mentores que precisam de volume de imagens para manter presença consistente nas redes.</div>
+    </div>
+    <div class="paraquem-card">
+      <div class="paraquem-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.6)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="paraquem-title">Profissionais de estética</div>
+      <div class="paraquem-desc">Lash designers, manicures e especialistas em harmonização facial que constroem autoridade pela própria imagem.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="section-depo" id="depoimentos">
+  <div class="depo-header">
+    <div class="section-label">Quem já usou</div>
+    <h2 class="depo-headline">O que dizem os clientes</h2>
+  </div>
+  <div class="depo-grid">
+    <div class="depo-card">
+      <div class="depo-quote">"</div>
+      <p class="depo-text">Adicione aqui o depoimento real de um cliente. Quanto mais específico e com resultado concreto, melhor converte.</p>
+      <div class="depo-author">
+        <div class="depo-avatar">AB</div>
+        <div>
+          <div class="depo-name">Nome do Cliente</div>
+          <div class="depo-role">Profissão</div>
+        </div>
+      </div>
+    </div>
+    <div class="depo-card">
+      <div class="depo-quote">"</div>
+      <p class="depo-text">Adicione aqui o depoimento real de um cliente. Use as avaliações e feedbacks que você já coletou na fase alpha do produto.</p>
+      <div class="depo-author">
+        <div class="depo-avatar">CD</div>
+        <div>
+          <div class="depo-name">Nome do Cliente</div>
+          <div class="depo-role">Profissão</div>
+        </div>
+      </div>
+    </div>
+    <div class="depo-card">
+      <div class="depo-quote">"</div>
+      <p class="depo-text">Adicione aqui o depoimento real de um cliente. Print de WhatsApp ou story de resultado também funciona muito bem nesta seção.</p>
+      <div class="depo-author">
+        <div class="depo-avatar">EF</div>
+        <div>
+          <div class="depo-name">Nome do Cliente</div>
+          <div class="depo-role">Profissão</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section-cta-final">
+  <div class="cta-eyebrow">Pronto para começar?</div>
+  <h2 class="cta-headline">Sua presença digital merece uma imagem à altura.</h2>
+  <p class="cta-sub">Mande uma mensagem no WhatsApp e receba as instruções para começar. Em até 48 horas suas fotos profissionais estarão prontas.</p>
+  <div class="cta-btn-wrap">
+    <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20saber%20mais%20sobre%20as%20fotos%20com%20IA" class="btn-large" target="_blank">
+      Falar no WhatsApp
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <p class="cta-note">Atendimento via WhatsApp · Pagamento por Pix ou transferência</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">tharssys</div>
+  <div class="footer-copy">© 2025 — Fotos profissionais com IA</div>
+</footer>
+
+</body>
+</html>
