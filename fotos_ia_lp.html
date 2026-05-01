@@ -117,7 +117,7 @@
   .hero-wrapper {
     position: relative;
     max-width: 1440px;
-    margin: 0 auto;
+    margin: -90px auto 0;
     overflow: hidden;
     min-height: 100vh;
   }
@@ -132,24 +132,13 @@
     position: absolute;
     inset: 0;
     background-size: cover;
-    background-position: center right;
+    background-position: center 15%;
     opacity: 0;
     transition: opacity 1s ease;
   }
 
   .hero-slide.active { opacity: 1; }
 
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(to right,
-      rgba(23,20,18,0.95) 0%,
-      rgba(23,20,18,0.80) 35%,
-      rgba(23,20,18,0.35) 65%,
-      rgba(23,20,18,0.05) 100%
-    );
-  }
 
   .hero-section {
     position: relative;
@@ -157,7 +146,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: start;
-    padding: 228px 3rem 5rem;
+    padding: 318px 3rem 5rem;
     min-height: 100vh;
   }
 
@@ -1087,12 +1076,11 @@
 <div class="hero-wrapper">
   <!-- Background slideshow -->
   <div class="hero-bg">
-    <div class="hero-slide active" style="background-image: url('../RECURSOS/CAPA1.png')"></div>
-    <div class="hero-slide" style="background-image: url('../RECURSOS/CAPA2.png')"></div>
-    <div class="hero-slide" style="background-image: url('../RECURSOS/CAPA3.png')"></div>
-    <div class="hero-slide" style="background-image: url('../RECURSOS/CAPA4.png')"></div>
+    <div class="hero-slide active" style="background-image: url('../RECURSOS/CAPA1.png'); background-size: 150%;"></div>
+    <div class="hero-slide" style="background-image: url('../RECURSOS/CAPA2.png'); background-size: 150%;"></div>
+    <div class="hero-slide" style="background-image: url('../RECURSOS/CAPA3.png');"></div>
+    <div class="hero-slide" style="background-image: url('../RECURSOS/CAPA4.png');"></div>
   </div>
-  <div class="hero-overlay"></div>
 
   <section class="hero-section">
     <!-- Esquerda -->
