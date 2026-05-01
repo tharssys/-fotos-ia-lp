@@ -180,12 +180,14 @@
     align-items: flex-end;
     justify-content: flex-start;
     gap: 1.2rem;
+    position: relative;
+    z-index: 3;
   }
 
   .hero-right-text {
     font-family: 'DM Sans', sans-serif;
     font-size: 24px;
-    color: rgba(247,243,238,0.55);
+    color: rgba(247,243,238,1);
     line-height: 1.5;
     font-weight: 300;
     text-align: right;
@@ -203,13 +205,12 @@
     border-radius: 6px;
     overflow: hidden;
     flex-shrink: 0;
-    opacity: 0.5;
+    opacity: 1;
     border: 2px solid transparent;
-    transition: opacity 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+    transition: border-color 0.4s ease, transform 0.4s ease;
   }
 
   .hero-thumb.active {
-    opacity: 1;
     border-color: var(--accent);
     transform: scale(1.06);
   }
