@@ -139,16 +139,26 @@
 
   .hero-slide.active { opacity: 1; }
 
-  .hero-overlay {
+  .hero-fade {
     position: absolute;
-    inset: 0;
     z-index: 1;
     pointer-events: none;
-    background:
-      linear-gradient(to right,  #171412 0%, #171412 20%, rgba(23,20,18,0) 60%),
-      linear-gradient(to left,   #171412 0%, #171412 20%, rgba(23,20,18,0) 60%),
-      linear-gradient(to top,    #171412 0%, #171412 10%, rgba(23,20,18,0) 40%),
-      linear-gradient(to bottom, #171412 0%, #171412 5%,  rgba(23,20,18,0) 25%);
+  }
+  .hero-fade-left {
+    top: 0; left: 0; bottom: 0; width: 40%;
+    background: linear-gradient(to right, #171412 0%, #171412 10%, rgba(23,20,18,0) 100%);
+  }
+  .hero-fade-right {
+    top: 0; right: 0; bottom: 0; width: 40%;
+    background: linear-gradient(to left, #171412 0%, #171412 10%, rgba(23,20,18,0) 100%);
+  }
+  .hero-fade-top {
+    top: 0; left: 0; right: 0; height: 35%;
+    background: linear-gradient(to bottom, #171412 0%, #171412 5%, rgba(23,20,18,0) 100%);
+  }
+  .hero-fade-bottom {
+    bottom: 0; left: 0; right: 0; height: 30%;
+    background: linear-gradient(to top, #171412 0%, #171412 5%, rgba(23,20,18,0) 100%);
   }
 
 
@@ -1093,7 +1103,10 @@
     <div class="hero-slide" style="background-image: url('../RECURSOS/CAPA3.png');"></div>
     <div class="hero-slide" style="background-image: url('../RECURSOS/CAPA4.png');"></div>
   </div>
-  <div class="hero-overlay"></div>
+  <div class="hero-fade hero-fade-left"></div>
+  <div class="hero-fade hero-fade-right"></div>
+  <div class="hero-fade hero-fade-top"></div>
+  <div class="hero-fade hero-fade-bottom"></div>
 
   <section class="hero-section">
     <!-- Esquerda -->
