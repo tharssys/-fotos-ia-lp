@@ -114,15 +114,51 @@
   /* ================================
      HERO
   ================================ */
-  .hero-section {
+  .hero-wrapper {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
     min-height: 100vh;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center right;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  .hero-slide.active { opacity: 1; }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to right,
+      rgba(23,20,18,0.95) 0%,
+      rgba(23,20,18,0.80) 35%,
+      rgba(23,20,18,0.35) 65%,
+      rgba(23,20,18,0.05) 100%
+    );
+  }
+
+  .hero-section {
+    position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: start;
     padding: 228px 3rem 5rem;
-    max-width: 1440px;
-    margin: 0 auto;
-    gap: 3rem;
+    min-height: 100vh;
   }
 
   .hero-headline {
@@ -151,8 +187,11 @@
   .hero-right {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 3rem;
+    gap: 1.2rem;
+    min-height: calc(100vh - 228px);
   }
 
   .hero-right-text {
@@ -162,6 +201,36 @@
     line-height: 1.5;
     font-weight: 300;
     text-align: right;
+  }
+
+  .hero-thumbs {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+  }
+
+  .hero-thumb {
+    width: 100px;
+    height: 136px;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+    opacity: 0.5;
+    border: 2px solid transparent;
+    transition: opacity 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+  }
+
+  .hero-thumb.active {
+    opacity: 1;
+    border-color: var(--accent);
+    transform: scale(1.06);
+  }
+
+  .hero-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
 .hero-dots {
@@ -1015,42 +1084,61 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero-section">
-  <div class="hero-text">
-    <h1 class="hero-headline">Sua imagem está<br>comunicando<br>menos do que<br><em>você vale!</em></h1>
-    <p class="hero-sub">Mude isso sem fotógrafo, sem<br>estúdio e em até 48h</p>
-    <div class="hero-cta-group">
-      <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20saber%20mais%20sobre%20as%20fotos%20com%20IA" class="btn-primary" target="_blank">Falar no WhatsApp →</a>
-      <a href="#planos" class="btn-secondary">Ver planos
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5c0 0 0 8.5 0 10"/><path d="M7 14.5c1.5 1.8 3 3 5 3.5 2-0.5 3.5-1.7 5-3.5"/></svg>
-      </a>
-    </div>
-    <div class="hero-proof-wrap">
-      <div class="proof-item">
-        <span class="proof-num">48h</span>
-        <span class="proof-label">Prazo de<br>entrega</span>
-      </div>
-      <div class="proof-item">
-        <span class="proof-num">+100</span>
-        <span class="proof-label">Ensaios<br>entregues</span>
-      </div>
-      <div class="proof-item">
-        <span class="proof-num">2k/4K</span>
-        <span class="proof-label">Fotos em Alta<br>resolução</span>
-      </div>
-    </div>
+<div class="hero-wrapper">
+  <!-- Background slideshow -->
+  <div class="hero-bg">
+    <div class="hero-slide active" style="background-image: url('../RECURSOS/CAPA1.png')"></div>
+    <div class="hero-slide" style="background-image: url('../RECURSOS/CAPA2.png')"></div>
+    <div class="hero-slide" style="background-image: url('../RECURSOS/CAPA3.png')"></div>
+    <div class="hero-slide" style="background-image: url('../RECURSOS/CAPA4.png')"></div>
   </div>
+  <div class="hero-overlay"></div>
 
-  <div class="hero-right">
-    <p class="hero-right-text">Fotos profissionais geradas com IA e<br>direção criativa de um estúdio!</p>
-    <div class="hero-dots">
-      <div class="hero-dot active"></div>
-      <div class="hero-dot"></div>
-      <div class="hero-dot"></div>
-      <div class="hero-dot"></div>
+  <section class="hero-section">
+    <!-- Esquerda -->
+    <div class="hero-text">
+      <h1 class="hero-headline">Sua imagem está<br>comunicando<br>menos do que<br><em>você vale!</em></h1>
+      <p class="hero-sub">Mude isso sem fotógrafo, sem<br>estúdio e em até 48h</p>
+      <div class="hero-cta-group">
+        <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20saber%20mais%20sobre%20as%20fotos%20com%20IA" class="btn-primary" target="_blank">Falar no WhatsApp →</a>
+        <a href="#planos" class="btn-secondary">Ver planos
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5c0 0 0 8.5 0 10"/><path d="M7 14.5c1.5 1.8 3 3 5 3.5 2-0.5 3.5-1.7 5-3.5"/></svg>
+        </a>
+      </div>
+      <div class="hero-proof-wrap">
+        <div class="proof-item">
+          <span class="proof-num">48h</span>
+          <span class="proof-label">Prazo de<br>entrega</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-num">+100</span>
+          <span class="proof-label">Ensaios<br>entregues</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-num">2k/4K</span>
+          <span class="proof-label">Fotos em Alta<br>resolução</span>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+
+    <!-- Direita: texto + thumbs + dots -->
+    <div class="hero-right">
+      <p class="hero-right-text">Fotos profissionais geradas com IA e<br>direção criativa de um estúdio!</p>
+      <div class="hero-thumbs">
+        <div class="hero-thumb active"><img src="../RECURSOS/foto 1.png" alt="Cliente 1"></div>
+        <div class="hero-thumb"><img src="../RECURSOS/foto2.jpeg" alt="Cliente 2"></div>
+        <div class="hero-thumb"><img src="../RECURSOS/foto3.jpeg" alt="Cliente 3"></div>
+        <div class="hero-thumb"><img src="../RECURSOS/foto4.jpg" alt="Cliente 4"></div>
+      </div>
+      <div class="hero-dots">
+        <div class="hero-dot active"></div>
+        <div class="hero-dot"></div>
+        <div class="hero-dot"></div>
+        <div class="hero-dot"></div>
+      </div>
+    </div>
+  </section>
+</div>
 
 <!-- DOR -->
 <section class="section-dor">
@@ -1379,5 +1467,21 @@
   <div class="footer-copy">© 2026 — IMAGO protocolo</div>
 </footer>
 
+<script>
+  const slides = document.querySelectorAll('.hero-slide');
+  const thumbs = document.querySelectorAll('.hero-thumb');
+  const dots   = document.querySelectorAll('.hero-dot');
+  let current  = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    thumbs[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+    thumbs[current].classList.add('active');
+    dots[current].classList.add('active');
+  }, 2000);
+</script>
 </body>
 </html>
