@@ -3,21 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fotos Profissionais com IA — @tharssys</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<title>IMAGO protocolo — Fotos profissionais com IA</title>
+<style>
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-Thin.ttf') format('truetype'); font-weight: 100; font-style: normal; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-Thin_Italic.ttf') format('truetype'); font-weight: 100; font-style: italic; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-ExtraLight.ttf') format('truetype'); font-weight: 200; font-style: normal; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-ExtraLight_Italic.ttf') format('truetype'); font-weight: 200; font-style: italic; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-Light_Italic.ttf') format('truetype'); font-weight: 300; font-style: italic; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-Regular_Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-Medium_Italic.ttf') format('truetype'); font-weight: 500; font-style: italic; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-SemiBold_Italic.ttf') format('truetype'); font-weight: 600; font-style: italic; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-Bold_Italic.ttf') format('truetype'); font-weight: 700; font-style: italic; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-ExtraBold_Italic.ttf') format('truetype'); font-weight: 800; font-style: italic; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-Heavy.ttf') format('truetype'); font-weight: 900; font-style: normal; }
+  @font-face { font-family: 'Blauer Nue'; src: url('../ATIVOS/fontes/Blauer Neu/Blauer Nue Downloads/TrueType/BlauerNue-Heavy_Italic.ttf') format('truetype'); font-weight: 900; font-style: italic; }
+
+  @font-face { font-family: 'DM Sans'; src: url('../ATIVOS/fontes/DM_Sans/DMSans-VariableFont_opsz,wght.ttf') format('truetype'); font-weight: 100 900; font-style: normal; }
+  @font-face { font-family: 'DM Sans'; src: url('../ATIVOS/fontes/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf') format('truetype'); font-weight: 100 900; font-style: italic; }
+</style>
 <style>
   :root {
-    --cream: #F5F0E8;
-    --dark: #0E0E0E;
-    --mid: #1A1A1A;
-    --accent: #C8A96E;
-    --accent-light: #E8D5A8;
-    --gray: #888;
-    --light-border: rgba(200,169,110,0.2);
+    --cream: #F7F3EE;
+    --dark: #171412;
+    --mid: #1F1B18;
+    --accent: #DA471C;
+    --accent-light: #E8622D;
+    --brown: #996D51;
+    --gray: #A6ABAF;
+    --light-border: rgba(153,109,81,0.2);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -29,7 +51,8 @@
     overflow-x: hidden;
   }
 
-  /* NOISE TEXTURE */
+  p, li, span, div { font-weight: 300; }
+
   body::before {
     content: '';
     position: fixed;
@@ -37,155 +60,216 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
     pointer-events: none;
     z-index: 0;
-    opacity: 0.5;
+    opacity: 0.4;
   }
 
   section, nav, footer { position: relative; z-index: 1; }
 
-  /* NAV */
+  /* ================================
+     NAV
+  ================================ */
   nav {
-    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(46,41,37,0.15);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--light-border);
+  }
+
+  .nav-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--light-border);
-    position: sticky;
-    top: 0;
-    background: rgba(14,14,14,0.92);
-    backdrop-filter: blur(12px);
-    z-index: 100;
   }
 
-  .nav-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    color: var(--accent);
-    letter-spacing: 0.02em;
+  .nav-logo svg {
+    height: 26px;
+    width: auto;
+    display: block;
   }
 
   .nav-cta {
     background: var(--accent);
     color: var(--dark);
     padding: 0.6rem 1.4rem;
-    border-radius: 2px;
-    font-size: 0.8rem;
+    border-radius: 3px;
+    font-size: 14px;
     font-weight: 500;
     text-decoration: none;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    transition: all 0.2s;
+    letter-spacing: 0.02em;
+    transition: background 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
   }
 
   .nav-cta:hover { background: var(--accent-light); }
 
-  /* HERO */
-  .hero {
-    min-height: 92vh;
+  /* ================================
+     HERO
+  ================================ */
+  .hero-section {
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
-    align-items: center;
-    padding: 6rem 2rem 4rem;
-    max-width: 1200px;
+    align-items: start;
+    padding: 228px 3rem 5rem;
+    max-width: 1440px;
     margin: 0 auto;
-  }
-
-  .hero-text { padding-right: 4rem; }
-
-  .hero-eyebrow {
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .hero-eyebrow::before {
-    content: '';
-    display: block;
-    width: 32px;
-    height: 1px;
-    background: var(--accent);
+    gap: 3rem;
   }
 
   .hero-headline {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.8rem, 5vw, 4.2rem);
-    line-height: 1.08;
-    font-weight: 900;
+    font-family: 'Blauer Nue', sans-serif;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 300;
     color: var(--cream);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.4rem;
   }
 
   .hero-headline em {
+    font-weight: 500;
     font-style: italic;
-    color: var(--accent);
   }
 
   .hero-sub {
-    font-size: 1rem;
-    color: rgba(245,240,232,0.6);
-    margin-bottom: 2.5rem;
-    max-width: 420px;
-    line-height: 1.8;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    color: rgba(247,243,238,0.55);
+    margin-bottom: 2.4rem;
+    line-height: 1.5;
+    font-weight: 300;
   }
 
-  .hero-cta-group { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-end;
+  }
+
+  .hero-right-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    color: rgba(247,243,238,0.55);
+    line-height: 1.5;
+    font-weight: 300;
+    text-align: right;
+  }
+
+.hero-dots {
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  .hero-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(247,243,238,0.18);
+    transition: all 0.2s;
+  }
+
+  .hero-dot.active {
+    background: var(--cream);
+    width: 18px;
+    border-radius: 3px;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-bottom: 0;
+  }
 
   .btn-primary {
     background: var(--accent);
-    color: var(--dark);
-    padding: 1rem 2rem;
-    border-radius: 2px;
+    color: var(--cream);
+    width: 258.95px;
+    height: 56px;
+    border-radius: 3px;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 16px;
     text-decoration: none;
-    letter-spacing: 0.04em;
-    transition: all 0.2s;
+    transition: background 0.2s, transform 0.15s;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
+    flex-shrink: 0;
   }
 
   .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
 
-  .btn-ghost {
-    color: rgba(245,240,232,0.5);
-    font-size: 0.85rem;
+  .btn-secondary {
+    background: var(--gray);
+    color: var(--cream);
+    width: 149.78px;
+    height: 56px;
+    border-radius: 3px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
     text-decoration: none;
+    transition: opacity 0.2s;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.4rem;
-    transition: color 0.2s;
+    flex-shrink: 0;
   }
 
-  .btn-ghost:hover { color: var(--cream); }
+  .btn-secondary:hover { opacity: 0.85; }
 
-  .hero-proof {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--light-border);
+  .hero-proof-wrap {
+    width: calc(258.95px + 4px + 149.78px);
+    border-top: 1px solid rgba(247,243,238,0.4);
+    padding-top: 1.2rem;
+    margin-top: 1.2rem;
     display: flex;
-    gap: 2.5rem;
+    justify-content: space-between;
   }
 
-  .proof-item {}
+  .proof-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .proof-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-family: 'Blauer Nue', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
     color: var(--accent);
     line-height: 1;
+    display: block;
   }
-  .proof-label { font-size: 0.78rem; color: rgba(245,240,232,0.45); margin-top: 0.3rem; letter-spacing: 0.04em; }
+
+  .proof-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12.5px;
+    color: rgba(247,243,238,0.4);
+    margin-top: 0.3rem;
+    display: block;
+    line-height: 1.3;
+    font-weight: 300;
+    text-align: center;
+  }
 
   /* HERO VISUAL */
   .hero-visual {
     position: relative;
-    height: 580px;
+    height: 560px;
   }
 
   .photo-stack {
@@ -196,41 +280,21 @@
 
   .photo-card {
     position: absolute;
-    border-radius: 4px;
+    border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 32px 64px rgba(0,0,0,0.6);
+    box-shadow: 0 20px 56px rgba(0,0,0,0.45);
   }
 
-  .photo-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+  .photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-  .photo-card-1 { width: 55%; height: 72%; top: 0; right: 0; }
-  .photo-card-2 { width: 48%; height: 55%; bottom: 0; left: 0; border: 1px solid var(--light-border); }
+  .photo-card-1 { width: 54%; height: 65%; top: 0; right: 0; }
+  .photo-card-2 { width: 46%; height: 52%; bottom: 8%; left: 0; }
+  .photo-card-3 { width: 38%; height: 42%; top: 22%; left: 40%; z-index: 5; }
+  .photo-card-4 { width: 30%; height: 32%; bottom: 0; right: 8%; }
 
-  .photo-badge {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: var(--dark);
-    border: 1px solid var(--accent);
-    padding: 0.6rem 1.2rem;
-    border-radius: 2px;
-    font-size: 0.72rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    white-space: nowrap;
-    z-index: 10;
-  }
-
-  /* PLACEHOLDER PHOTOS */
   .photo-placeholder {
-    background: var(--mid);
+    background: #3D302A;
+    border: 1px solid rgba(247,243,238,0.06);
     width: 100%;
     height: 100%;
     display: flex;
@@ -241,23 +305,46 @@
   }
 
   .photo-placeholder span {
-    font-size: 0.7rem;
-    color: var(--gray);
+    font-size: 0.62rem;
+    color: rgba(247,243,238,0.18);
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
   .photo-placeholder .icon {
-    width: 32px;
-    height: 32px;
-    border: 1px solid rgba(136,136,136,0.3);
+    width: 26px;
+    height: 26px;
+    border: 1px solid rgba(247,243,238,0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  /* DOR SECTION */
+  .hero-dots {
+    display: flex;
+    gap: 0.4rem;
+    margin-top: 1.8rem;
+    justify-content: center;
+  }
+
+  .hero-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(247,243,238,0.18);
+    transition: all 0.2s;
+  }
+
+  .hero-dot.active {
+    background: var(--cream);
+    width: 18px;
+    border-radius: 3px;
+  }
+
+  /* ================================
+     DOR SECTION
+  ================================ */
   .section-dor {
     padding: 6rem 2rem;
     max-width: 900px;
@@ -269,12 +356,12 @@
     font-size: 0.7rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--brown);
     margin-bottom: 1.2rem;
   }
 
   .dor-headline {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Blauer Nue', sans-serif;
     font-size: clamp(1.8rem, 3.5vw, 2.8rem);
     font-weight: 700;
     line-height: 1.2;
@@ -311,17 +398,19 @@
     flex-shrink: 0;
   }
 
-  .dor-text { font-size: 0.9rem; color: rgba(245,240,232,0.7); line-height: 1.6; }
+  .dor-text { font-size: 0.9rem; color: rgba(247,243,238,0.7); line-height: 1.6; }
 
   .dor-footer {
     font-size: 1rem;
-    color: rgba(245,240,232,0.5);
+    color: rgba(247,243,238,0.5);
     line-height: 1.8;
   }
 
   .dor-footer strong { color: var(--cream); font-weight: 500; }
 
-  /* GALERIA */
+  /* ================================
+     GALERIA
+  ================================ */
   .section-galeria {
     padding: 6rem 2rem;
     background: var(--mid);
@@ -338,7 +427,7 @@
   }
 
   .galeria-headline {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Blauer Nue', sans-serif;
     font-size: clamp(1.8rem, 3vw, 2.4rem);
     font-weight: 700;
     max-width: 480px;
@@ -347,7 +436,7 @@
 
   .galeria-note {
     font-size: 0.8rem;
-    color: rgba(245,240,232,0.35);
+    color: rgba(247,243,238,0.35);
     text-align: right;
     max-width: 200px;
     line-height: 1.6;
@@ -366,7 +455,7 @@
     border-radius: 3px;
     overflow: hidden;
     position: relative;
-    background: #222;
+    background: #3A302A;
   }
 
   .galeria-item:nth-child(2) { margin-top: 2rem; }
@@ -375,24 +464,30 @@
   .galeria-item .overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(14,14,14,0.7) 0%, transparent 50%);
+    background: linear-gradient(to top, rgba(46,41,37,0.85) 0%, transparent 55%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 1.2rem;
     opacity: 0;
     transition: opacity 0.3s;
-    display: flex;
-    align-items: flex-end;
-    padding: 1rem;
   }
 
   .galeria-item:hover .overlay { opacity: 1; }
 
-  .galeria-tag {
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent);
-    background: rgba(14,14,14,0.8);
-    padding: 0.3rem 0.6rem;
-    border-radius: 2px;
+  .galeria-depo {
+    font-size: 0.75rem;
+    color: rgba(247,243,238,0.75);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+  }
+
+  .galeria-client {
+    font-size: 0.7rem;
+    color: var(--brown);
+    font-weight: 500;
   }
 
   .galeria-placeholder {
@@ -403,13 +498,13 @@
     justify-content: center;
     flex-direction: column;
     gap: 0.75rem;
-    background: #1c1c1c;
-    border: 1px solid rgba(200,169,110,0.08);
+    background: #3A302A;
+    border: 1px solid rgba(153,109,81,0.1);
   }
 
   .galeria-placeholder .ph-label {
     font-size: 0.65rem;
-    color: rgba(200,169,110,0.3);
+    color: rgba(153,109,81,0.4);
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
@@ -417,14 +512,16 @@
   .galeria-placeholder .ph-area {
     width: 40px;
     height: 40px;
-    border: 1px solid rgba(200,169,110,0.15);
+    border: 1px solid rgba(153,109,81,0.2);
     border-radius: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  /* COMO FUNCIONA */
+  /* ================================
+     COMO FUNCIONA
+  ================================ */
   .section-como {
     padding: 7rem 2rem;
     max-width: 1100px;
@@ -434,13 +531,13 @@
   .como-header { text-align: center; margin-bottom: 5rem; }
 
   .como-headline {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Blauer Nue', sans-serif;
     font-size: clamp(1.8rem, 3vw, 2.6rem);
     font-weight: 700;
     margin-bottom: 1rem;
   }
 
-  .como-sub { font-size: 0.9rem; color: rgba(245,240,232,0.45); }
+  .como-sub { font-size: 0.9rem; color: rgba(247,243,238,0.45); }
 
   .steps-grid {
     display: grid;
@@ -456,14 +553,13 @@
   .step {
     background: var(--mid);
     padding: 2.5rem 2rem;
-    position: relative;
   }
 
   .step-num {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Blauer Nue', sans-serif;
     font-size: 3.5rem;
     font-weight: 900;
-    color: rgba(200,169,110,0.12);
+    color: rgba(153,109,81,0.15);
     line-height: 1;
     margin-bottom: 1rem;
   }
@@ -475,7 +571,7 @@
     margin-bottom: 0.6rem;
   }
 
-  .step-desc { font-size: 0.85rem; color: rgba(245,240,232,0.5); line-height: 1.7; }
+  .step-desc { font-size: 0.85rem; color: rgba(247,243,238,0.5); line-height: 1.7; }
 
   .prazo-bar {
     background: var(--mid);
@@ -489,11 +585,63 @@
     text-align: center;
   }
 
-  .prazo-bar .prazo-label { font-size: 0.8rem; color: rgba(245,240,232,0.4); letter-spacing: 0.08em; text-transform: uppercase; }
-  .prazo-bar .prazo-val { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+  .prazo-bar .prazo-label { font-size: 0.8rem; color: rgba(247,243,238,0.4); letter-spacing: 0.08em; text-transform: uppercase; }
+  .prazo-bar .prazo-val { font-family: 'Blauer Nue', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--accent); }
   .prazo-divider { width: 1px; height: 32px; background: var(--light-border); }
 
-  /* PLANOS */
+  /* ================================
+     PARA QUEM
+  ================================ */
+  .section-paraquem {
+    padding: 7rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .paraquem-header { text-align: center; margin-bottom: 4rem; }
+
+  .paraquem-headline {
+    font-family: 'Blauer Nue', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700;
+  }
+
+  .paraquem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .paraquem-card {
+    border: 1px solid var(--light-border);
+    border-radius: 4px;
+    padding: 1.8rem;
+    background: var(--mid);
+  }
+
+  .paraquem-icon {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--light-border);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .paraquem-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+  }
+
+  .paraquem-desc { font-size: 0.8rem; color: rgba(247,243,238,0.45); line-height: 1.7; }
+
+  /* ================================
+     PLANOS
+  ================================ */
   .section-planos {
     padding: 7rem 2rem;
     background: var(--mid);
@@ -503,7 +651,7 @@
   .planos-header { text-align: center; margin-bottom: 4rem; }
 
   .planos-headline {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Blauer Nue', sans-serif;
     font-size: clamp(1.8rem, 3vw, 2.6rem);
     font-weight: 700;
     margin-bottom: 1rem;
@@ -511,26 +659,26 @@
 
   .planos-grid {
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     align-items: start;
   }
 
   .plano-card {
     background: var(--dark);
-    border: 1px solid rgba(200,169,110,0.15);
+    border: 1px solid var(--light-border);
     border-radius: 4px;
     padding: 2rem 1.5rem;
     transition: border-color 0.2s;
+    position: relative;
   }
 
-  .plano-card:hover { border-color: rgba(200,169,110,0.4); }
+  .plano-card:hover { border-color: rgba(153,109,81,0.45); }
 
   .plano-card.featured {
     border-color: var(--accent);
-    position: relative;
     margin-top: -0.5rem;
   }
 
@@ -540,7 +688,7 @@
     left: 50%;
     transform: translateX(-50%);
     background: var(--accent);
-    color: var(--dark);
+    color: var(--cream);
     font-size: 0.65rem;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -551,7 +699,7 @@
   }
 
   .plano-name {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Blauer Nue', sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--cream);
@@ -577,7 +725,7 @@
 
   .plano-features li {
     font-size: 0.82rem;
-    color: rgba(245,240,232,0.6);
+    color: rgba(247,243,238,0.6);
     padding: 0.35rem 0;
     display: flex;
     gap: 0.6rem;
@@ -606,70 +754,60 @@
     text-decoration: none;
     letter-spacing: 0.04em;
     transition: all 0.2s;
-    border: 1px solid rgba(200,169,110,0.3);
-    color: var(--accent);
+    border: 1px solid var(--light-border);
+    color: var(--brown);
   }
 
-  .plano-cta:hover { background: rgba(200,169,110,0.08); }
+  .plano-cta:hover { background: rgba(153,109,81,0.08); }
 
   .plano-card.featured .plano-cta {
     background: var(--accent);
-    color: var(--dark);
+    color: var(--cream);
     border-color: var(--accent);
   }
 
   .plano-card.featured .plano-cta:hover { background: var(--accent-light); }
 
-  /* PARA QUEM */
-  .section-paraquem {
-    padding: 7rem 2rem;
-    max-width: 1000px;
+  .plano-iniciante {
+    max-width: 1100px;
     margin: 0 auto;
-  }
-
-  .paraquem-header { text-align: center; margin-bottom: 4rem; }
-
-  .paraquem-headline {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
-    font-weight: 700;
-  }
-
-  .paraquem-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-  }
-
-  .paraquem-card {
+    background: var(--dark);
     border: 1px solid var(--light-border);
     border-radius: 4px;
-    padding: 1.8rem;
-    background: var(--mid);
-  }
-
-  .paraquem-icon {
-    width: 36px;
-    height: 36px;
-    border: 1px solid var(--light-border);
-    border-radius: 2px;
+    padding: 1.5rem 2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
   }
 
-  .paraquem-title {
-    font-size: 0.95rem;
+  .plano-iniciante-text {
+    font-size: 0.88rem;
+    color: rgba(247,243,238,0.5);
+    line-height: 1.6;
+    max-width: 520px;
+  }
+
+  .plano-iniciante-cta {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 0.65rem 1.4rem;
+    border-radius: 3px;
+    font-size: 0.82rem;
     font-weight: 500;
-    color: var(--cream);
-    margin-bottom: 0.5rem;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: all 0.2s;
+    white-space: nowrap;
   }
 
-  .paraquem-desc { font-size: 0.8rem; color: rgba(245,240,232,0.45); line-height: 1.7; }
+  .plano-iniciante-cta:hover { background: rgba(218,71,28,0.08); }
 
-  /* DEPOIMENTOS */
+  /* ================================
+     DEPOIMENTOS
+  ================================ */
   .section-depo {
     padding: 7rem 2rem;
     background: var(--mid);
@@ -679,7 +817,7 @@
   .depo-header { text-align: center; margin-bottom: 4rem; max-width: 600px; margin-left: auto; margin-right: auto; }
 
   .depo-headline {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Blauer Nue', sans-serif;
     font-size: clamp(1.6rem, 2.5vw, 2.2rem);
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -701,7 +839,7 @@
   }
 
   .depo-quote {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Blauer Nue', sans-serif;
     font-size: 2rem;
     color: var(--accent);
     line-height: 1;
@@ -710,7 +848,7 @@
 
   .depo-text {
     font-size: 0.88rem;
-    color: rgba(245,240,232,0.65);
+    color: rgba(247,243,238,0.65);
     line-height: 1.8;
     margin-bottom: 1.5rem;
     font-style: italic;
@@ -722,20 +860,23 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: rgba(200,169,110,0.15);
+    background: rgba(153,109,81,0.15);
     border: 1px solid var(--light-border);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.72rem;
-    color: var(--accent);
+    color: var(--brown);
     font-weight: 500;
+    flex-shrink: 0;
   }
 
   .depo-name { font-size: 0.82rem; font-weight: 500; color: var(--cream); }
   .depo-role { font-size: 0.72rem; color: var(--gray); }
 
-  /* CTA FINAL */
+  /* ================================
+     CTA FINAL
+  ================================ */
   .section-cta-final {
     padding: 8rem 2rem;
     text-align: center;
@@ -747,12 +888,12 @@
     font-size: 0.7rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--brown);
     margin-bottom: 1.5rem;
   }
 
   .cta-headline {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Blauer Nue', sans-serif;
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 900;
     line-height: 1.1;
@@ -761,7 +902,7 @@
 
   .cta-sub {
     font-size: 0.95rem;
-    color: rgba(245,240,232,0.5);
+    color: rgba(247,243,238,0.5);
     margin-bottom: 3rem;
     line-height: 1.8;
   }
@@ -770,14 +911,14 @@
 
   .btn-large {
     background: var(--accent);
-    color: var(--dark);
+    color: var(--cream);
     padding: 1.1rem 2.5rem;
-    border-radius: 2px;
+    border-radius: 3px;
     font-weight: 500;
     font-size: 0.9rem;
     text-decoration: none;
-    letter-spacing: 0.04em;
-    transition: all 0.2s;
+    letter-spacing: 0.02em;
+    transition: background 0.2s, transform 0.15s;
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
@@ -785,44 +926,47 @@
 
   .btn-large:hover { background: var(--accent-light); transform: translateY(-2px); }
 
-  .cta-note { font-size: 0.75rem; color: rgba(245,240,232,0.25); margin-top: 1.5rem; letter-spacing: 0.04em; }
-
-  /* FOOTER */
+  /* ================================
+     FOOTER
+  ================================ */
   footer {
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 3rem;
     border-top: 1px solid var(--light-border);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
   }
 
-  .footer-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    color: var(--accent);
+  .footer-logo svg {
+    height: 22px;
+    width: auto;
+    display: block;
   }
 
-  .footer-copy { font-size: 0.75rem; color: rgba(245,240,232,0.2); }
+  .footer-copy { font-size: 0.75rem; color: rgba(247,243,238,0.2); }
 
-  /* ANIMATIONS */
+  /* ================================
+     ANIMATIONS
+  ================================ */
   @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .hero-eyebrow { animation: fadeUp 0.6s ease both; }
-  .hero-headline { animation: fadeUp 0.6s 0.1s ease both; }
-  .hero-sub { animation: fadeUp 0.6s 0.2s ease both; }
-  .hero-cta-group { animation: fadeUp 0.6s 0.3s ease both; }
-  .hero-proof { animation: fadeUp 0.6s 0.4s ease both; }
-  .hero-visual { animation: fadeUp 0.8s 0.2s ease both; }
+  .hero-headline { animation: fadeUp 0.65s ease both; }
+  .hero-sub { animation: fadeUp 0.65s 0.1s ease both; }
+  .hero-cta-group { animation: fadeUp 0.65s 0.2s ease both; }
+  .hero-proof { animation: fadeUp 0.65s 0.3s ease both; }
+  .hero-visual { animation: fadeUp 0.8s 0.15s ease both; }
 
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; padding: 4rem 1.5rem 3rem; min-height: auto; }
-    .hero-text { padding-right: 0; margin-bottom: 3rem; }
+  /* ================================
+     RESPONSIVE
+  ================================ */
+  @media (max-width: 960px) {
+    .nav-inner { padding: 1.2rem 1.5rem; }
+    .hero-section { grid-template-columns: 1fr; padding: 5rem 1.5rem 3rem; min-height: auto; gap: 3rem; }
     .hero-visual { height: 380px; }
     .galeria-grid { grid-template-columns: repeat(2, 1fr); }
     .planos-grid { grid-template-columns: repeat(2, 1fr); }
@@ -835,8 +979,7 @@
 
   @media (max-width: 580px) {
     .planos-grid { grid-template-columns: 1fr; }
-    nav { padding: 1rem 1.5rem; }
-    .footer { flex-direction: column; gap: 1rem; text-align: center; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
   }
 </style>
 </head>
@@ -844,128 +987,150 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">tharssys</div>
-  <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20saber%20mais%20sobre%20as%20fotos%20com%20IA" class="nav-cta" target="_blank">Quero minhas fotos →</a>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <svg viewBox="60 248 666 84" fill="#F7F3EE" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <path d="M78.34,255.53v70.08h-12.85v-70.08h12.85Z"/>
+          <path d="M87.47,255.53h25.27l13.49,64.67h1.7l13.06-64.67h25.91l1.06,70.08h-12.85l-1.06-63.6h-1.59l-13.06,63.6h-24.63l-13.27-63.6h-1.27l-1.06,63.6h-12.74l1.06-70.08Z"/>
+          <path d="M199.4,255.53h25.06l23.47,70.08h-14.02l-7.86-21.98h-28.46l-7.54,21.98h-14.02l23.36-70.08ZM222.55,291.21l-9.87-30.16h-1.49l-9.88,30.16h21.24Z"/>
+          <path d="M302.94,325.61v-13.8h-1.27c-1.49,9.13-9.24,14.87-20.71,14.87-19.33,0-32.49-14.76-32.49-36s14.02-36.1,35.15-36.1c19.64,0,30.47,10.41,31.54,26.23h-12.64c-.85-9.98-8.6-13.8-18.9-13.8-13.17,0-22.51,9.13-22.51,23.68s9.34,23.47,22.51,23.47c12,0,19.33-5.1,19.33-13.06v-2.02h-22.51v-12.42h35.36v38.97h-12.85Z"/>
+          <path d="M395.43,290.57c0,21.02-13.91,36.1-35.78,36.1s-35.78-15.08-35.78-36.1,13.8-36.1,35.78-36.1,35.78,14.97,35.78,36.1ZM336.71,290.57c0,14.87,8.6,23.57,22.94,23.57,13.48,0,22.83-8.81,22.83-23.57s-9.34-23.68-22.83-23.68c-14.33,0-22.94,8.81-22.94,23.68Z"/>
+        </g>
+        <g>
+          <path d="M432.85,312.67v-34.67h11.34c2.71,0,4.94.45,6.71,1.36,1.77.91,3.07,2.12,3.91,3.64.84,1.52,1.26,3.25,1.26,5.2s-.42,3.59-1.26,5.13c-.84,1.54-2.14,2.76-3.89,3.66-1.75.91-4,1.36-6.74,1.36h-7.18v14.31h-4.16ZM437.01,294.84h7.08c2.77,0,4.75-.6,5.94-1.81,1.19-1.2,1.78-2.81,1.78-4.83,0-2.15-.59-3.8-1.78-4.98-1.19-1.17-3.17-1.76-5.94-1.76h-7.08v13.37Z"/>
+          <path d="M461.57,312.67v-34.67h11.19c2.71,0,4.92.45,6.64,1.36,1.72.91,2.99,2.12,3.81,3.64.82,1.52,1.24,3.24,1.24,5.15s-.42,3.55-1.26,5.1c-.84,1.55-2.14,2.79-3.89,3.71-1.75.92-4,1.39-6.74,1.39h-6.83v14.31h-4.16ZM465.73,295.09h6.74c2.64,0,4.58-.64,5.82-1.93s1.86-2.94,1.86-4.95-.6-3.67-1.81-4.88c-1.21-1.2-3.18-1.81-5.92-1.81h-6.69v13.57ZM479.9,312.67l-7.63-15.5h4.66l7.87,15.5h-4.9Z"/>
+          <path d="M506.44,313.26c-3.34,0-6.26-.75-8.79-2.25s-4.49-3.6-5.89-6.29c-1.4-2.69-2.11-5.82-2.11-9.38s.7-6.64,2.11-9.34c1.4-2.69,3.37-4.8,5.89-6.31,2.53-1.52,5.46-2.28,8.79-2.28s6.36.76,8.89,2.28c2.53,1.52,4.48,3.62,5.87,6.31s2.08,5.8,2.08,9.34-.69,6.69-2.08,9.38-3.34,4.79-5.87,6.29-5.49,2.25-8.89,2.25ZM506.44,309.6c2.51,0,4.71-.57,6.61-1.71,1.9-1.14,3.37-2.77,4.41-4.9,1.04-2.13,1.56-4.68,1.56-7.65s-.52-5.52-1.56-7.65c-1.04-2.13-2.51-3.76-4.41-4.88-1.9-1.12-4.1-1.68-6.61-1.68s-4.66.56-6.56,1.68c-1.9,1.12-3.37,2.75-4.41,4.88s-1.56,4.68-1.56,7.65.52,5.52,1.56,7.65,2.51,3.76,4.41,4.9c1.9,1.14,4.09,1.71,6.56,1.71Z"/>
+          <path d="M535.71,312.67v-31.25h-10.35v-3.42h24.86v3.42h-10.35v31.25h-4.16Z"/>
+          <path d="M569.04,313.26c-3.34,0-6.26-.75-8.79-2.25s-4.49-3.6-5.89-6.29c-1.4-2.69-2.11-5.82-2.11-9.38s.7-6.64,2.11-9.34c1.4-2.69,3.37-4.8,5.89-6.31,2.53-1.52,5.46-2.28,8.79-2.28s6.36.76,8.89,2.28c2.53,1.52,4.48,3.62,5.87,6.31s2.08,5.8,2.08,9.34-.69,6.69-2.08,9.38-3.34,4.79-5.87,6.29-5.49,2.25-8.89,2.25ZM569.04,309.6c2.51,0,4.71-.57,6.61-1.71,1.9-1.14,3.37-2.77,4.41-4.9,1.04-2.13,1.56-4.68,1.56-7.65s-.52-5.52-1.56-7.65c-1.04-2.13-2.51-3.76-4.41-4.88-1.9-1.12-4.1-1.68-6.61-1.68s-4.66.56-6.56,1.68c-1.9,1.12-3.37,2.75-4.41,4.88s-1.56,4.68-1.56,7.65.52,5.52,1.56,7.65,2.51,3.76,4.41,4.9c1.9,1.14,4.09,1.71,6.56,1.71Z"/>
+          <path d="M607.02,313.26c-3.37,0-6.28-.75-8.74-2.25-2.46-1.5-4.35-3.6-5.67-6.29-1.32-2.69-1.98-5.82-1.98-9.38s.66-6.69,1.98-9.38c1.32-2.69,3.21-4.79,5.67-6.29,2.46-1.5,5.37-2.25,8.74-2.25,3.96,0,7.18.94,9.66,2.82,2.48,1.88,4.06,4.54,4.75,7.97h-4.61c-.53-2.15-1.6-3.87-3.22-5.17-1.62-1.3-3.81-1.96-6.59-1.96-2.44,0-4.58.57-6.41,1.71s-3.24,2.77-4.23,4.9-1.49,4.68-1.49,7.65.5,5.52,1.49,7.65,2.4,3.76,4.23,4.9,3.97,1.71,6.41,1.71c2.77,0,4.97-.64,6.59-1.91,1.62-1.27,2.69-2.96,3.22-5.08h4.61c-.69,3.34-2.28,5.94-4.75,7.83-2.48,1.88-5.7,2.82-9.66,2.82Z"/>
+          <path d="M642.93,313.26c-3.34,0-6.26-.75-8.79-2.25s-4.49-3.6-5.89-6.29c-1.4-2.69-2.11-5.82-2.11-9.38s.7-6.64,2.11-9.34c1.4-2.69,3.37-4.8,5.89-6.31,2.53-1.52,5.46-2.28,8.79-2.28s6.36.76,8.89,2.28c2.53,1.52,4.48,3.62,5.87,6.31s2.08,5.8,2.08,9.34-.69,6.69-2.08,9.38-3.34,4.79-5.87,6.29-5.49,2.25-8.89,2.25ZM642.93,309.6c2.51,0,4.71-.57,6.61-1.71,1.9-1.14,3.37-2.77,4.41-4.9,1.04-2.13,1.56-4.68,1.56-7.65s-.52-5.52-1.56-7.65c-1.04-2.13-2.51-3.76-4.41-4.88-1.9-1.12-4.1-1.68-6.61-1.68s-4.66.56-6.56,1.68c-1.9,1.12-3.37,2.75-4.41,4.88s-1.56,4.68-1.56,7.65.52,5.52,1.56,7.65,2.51,3.76,4.41,4.9c1.9,1.14,4.09,1.71,6.56,1.71Z"/>
+          <path d="M665.86,312.67v-34.67h4.16v31.35h16.14v3.32h-20.3Z"/>
+          <path d="M704.19,313.26c-3.34,0-6.26-.75-8.79-2.25s-4.49-3.6-5.89-6.29c-1.4-2.69-2.11-5.82-2.11-9.38s.7-6.64,2.11-9.34c1.4-2.69,3.37-4.8,5.89-6.31,2.53-1.52,5.46-2.28,8.79-2.28s6.36.76,8.89,2.28c2.53,1.52,4.48,3.62,5.87,6.31s2.08,5.8,2.08,9.34-.69,6.69-2.08,9.38-3.34,4.79-5.87,6.29-5.49,2.25-8.89,2.25ZM704.19,309.6c2.51,0,4.71-.57,6.61-1.71,1.9-1.14,3.37-2.77,4.41-4.9,1.04-2.13,1.56-4.68,1.56-7.65s-.52-5.52-1.56-7.65c-1.04-2.13-2.51-3.76-4.41-4.88-1.9-1.12-4.1-1.68-6.61-1.68s-4.66.56-6.56,1.68c-1.9,1.12-3.37,2.75-4.41,4.88s-1.56,4.68-1.56,7.65.52,5.52,1.56,7.65,2.51,3.76,4.41,4.9c1.9,1.14,4.09,1.71,6.56,1.71Z"/>
+        </g>
+      </svg>
+    </div>
+    <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20saber%20mais%20sobre%20as%20fotos%20com%20IA" class="nav-cta" target="_blank">Quero minhas fotos →</a>
+  </div>
 </nav>
 
 <!-- HERO -->
-<section>
-  <div class="hero">
-    <div class="hero-text">
-      <div class="hero-eyebrow">Fotos profissionais com IA</div>
-      <h1 class="hero-headline">Sua imagem profissional,<br><em>sem fotógrafo.</em></h1>
-      <p class="hero-sub">Fotos que elevam sua presença no digital — criadas com IA a partir das suas próprias fotos. Sem ensaio, sem estúdio, sem deslocamento. Em até 48 horas.</p>
-      <div class="hero-cta-group">
-        <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20saber%20mais%20sobre%20as%20fotos%20com%20IA" class="btn-primary" target="_blank">Falar no WhatsApp →</a>
-        <a href="#planos" class="btn-ghost">Ver planos ↓</a>
+<section class="hero-section">
+  <div class="hero-text">
+    <h1 class="hero-headline">Sua imagem está<br>comunicando<br>menos do que<br><em>você vale!</em></h1>
+    <p class="hero-sub">Mude isso sem fotógrafo, sem<br>estúdio e em até 48h</p>
+    <div class="hero-cta-group">
+      <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20saber%20mais%20sobre%20as%20fotos%20com%20IA" class="btn-primary" target="_blank">Falar no WhatsApp →</a>
+      <a href="#planos" class="btn-secondary">Ver planos
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5c0 0 0 8.5 0 10"/><path d="M7 14.5c1.5 1.8 3 3 5 3.5 2-0.5 3.5-1.7 5-3.5"/></svg>
+      </a>
+    </div>
+    <div class="hero-proof-wrap">
+      <div class="proof-item">
+        <span class="proof-num">48h</span>
+        <span class="proof-label">Prazo de<br>entrega</span>
       </div>
-      <div class="hero-proof">
-        <div class="proof-item">
-          <div class="proof-num">48h</div>
-          <div class="proof-label">Prazo de entrega</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-num">+10</div>
-          <div class="proof-label">Profissionais atendidos</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-num">4K</div>
-          <div class="proof-label">Resolução máxima</div>
-        </div>
+      <div class="proof-item">
+        <span class="proof-num">+100</span>
+        <span class="proof-label">Ensaios<br>entregues</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-num">2k/4K</span>
+        <span class="proof-label">Fotos em Alta<br>resolução</span>
       </div>
     </div>
+  </div>
 
-    <div class="hero-visual">
-      <div class="photo-stack">
-        <div class="photo-card photo-card-1">
-          <div class="photo-placeholder">
-            <div class="icon">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(136,136,136,0.5)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            </div>
-            <span>Foto gerada com IA</span>
-          </div>
-        </div>
-        <div class="photo-card photo-card-2">
-          <div class="photo-placeholder">
-            <div class="icon">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(136,136,136,0.5)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            </div>
-            <span>Foto gerada com IA</span>
-          </div>
-        </div>
-        <div class="photo-badge">Geradas com IA</div>
-      </div>
+  <div class="hero-right">
+    <p class="hero-right-text">Fotos profissionais geradas com IA e<br>direção criativa de um estúdio!</p>
+    <div class="hero-dots">
+      <div class="hero-dot active"></div>
+      <div class="hero-dot"></div>
+      <div class="hero-dot"></div>
+      <div class="hero-dot"></div>
     </div>
   </div>
 </section>
 
 <!-- DOR -->
 <section class="section-dor">
-  <div class="section-label">O problema que todo profissional sente</div>
+  <div class="section-label">os problemas</div>
   <h2 class="dor-headline">Se você usa sua imagem para vender,<br>provavelmente já sentiu isso</h2>
   <div class="dor-grid">
     <div class="dor-item">
       <div class="dor-icon"></div>
-      <div class="dor-text">Suas fotos acabam rápido e você fica repetindo as mesmas imagens</div>
+      <div class="dor-text">Um novo ensaio fotográfico nem sempre compensa — é logística, custo e tempo.</div>
     </div>
     <div class="dor-item">
       <div class="dor-icon"></div>
-      <div class="dor-text">Falta variedade para criar conteúdo com consistência</div>
+      <div class="dor-text">Falta variedade para criar conteúdo com consistência e manter um posicionamento de imagem sólido.</div>
     </div>
     <div class="dor-item">
       <div class="dor-icon"></div>
-      <div class="dor-text">Um novo ensaio fotográfico nem sempre compensa — é logística, custo e tempo</div>
+      <div class="dor-text">Suas fotos acabam rápido e você fica repetindo as mesmas imagens.</div>
     </div>
     <div class="dor-item">
       <div class="dor-icon"></div>
-      <div class="dor-text">Sua imagem atual não acompanha o nível do serviço que você entrega</div>
+      <div class="dor-text">Sua imagem atual não acompanha o nível do serviço que você entrega.</div>
     </div>
   </div>
-  <p class="dor-footer">Hoje existe uma forma de ter fotos profissionais com <strong>mais praticidade, sem perder qualidade</strong> — e sem depender de nenhum fotógrafo.</p>
+  <p class="dor-footer">A maioria dos profissionais continua preso nesse ciclo porque acha que a única saída é marcar outro ensaio. <strong>NÃO É!</strong></p>
 </section>
 
 <!-- GALERIA -->
 <section class="section-galeria" id="resultados">
   <div class="galeria-header">
     <h2 class="galeria-headline">Resultados reais.<br>Gerados com IA.</h2>
-    <div class="galeria-note">Todas as fotos abaixo foram criadas com IA a partir de fotos enviadas pelos clientes</div>
+    <div class="galeria-note">Não é só foto com IA — são fotos profissionais geradas com Inteligência Artificial utilizando direcionamento criativo de um estúdio de fotografia</div>
   </div>
   <div class="galeria-grid">
     <div class="galeria-item">
       <div class="galeria-placeholder">
         <div class="ph-area">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.25)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(153,109,81,0.3)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
         </div>
-        <span class="ph-label">Sua foto aqui</span>
+        <span class="ph-label">Pollyana</span>
       </div>
-      <div class="overlay"><span class="galeria-tag">Executivo</span></div>
+      <div class="overlay">
+        <p class="galeria-depo">Estava construindo seu posicionamento e precisava de fotos que dessem seriedade a esse processo.</p>
+        <span class="galeria-client">Pollyana — Consultora</span>
+      </div>
     </div>
     <div class="galeria-item">
       <div class="galeria-placeholder">
         <div class="ph-area">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.25)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(153,109,81,0.3)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
         </div>
-        <span class="ph-label">Sua foto aqui</span>
+        <span class="ph-label">Leandro</span>
       </div>
-      <div class="overlay"><span class="galeria-tag">Studio</span></div>
+      <div class="overlay">
+        <p class="galeria-depo">Fotos que entregam quem ele é de verdade — o profissional criativo, o jornalista, o assessor.</p>
+        <span class="galeria-client">Leandro — Assessor de Imprensa</span>
+      </div>
     </div>
     <div class="galeria-item">
       <div class="galeria-placeholder">
         <div class="ph-area">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.25)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(153,109,81,0.3)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
         </div>
-        <span class="ph-label">Sua foto aqui</span>
+        <span class="ph-label">Amália</span>
       </div>
-      <div class="overlay"><span class="galeria-tag">Casual</span></div>
+      <div class="overlay">
+        <p class="galeria-depo">Ela não queria parecer só mais uma copywriter de studio. Queria aparecer como a mulher versátil e autêntica que é.</p>
+        <span class="galeria-client">Amália — Mentora e Copywriter</span>
+      </div>
     </div>
     <div class="galeria-item">
       <div class="galeria-placeholder">
         <div class="ph-area">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.25)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(153,109,81,0.3)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
         </div>
-        <span class="ph-label">Sua foto aqui</span>
+        <span class="ph-label">Amanda</span>
       </div>
-      <div class="overlay"><span class="galeria-tag">Editorial</span></div>
+      <div class="overlay">
+        <p class="galeria-depo">Agência rodando. Perfil com engajamento. Precisa de um banco de imagens à altura disso tudo.</p>
+        <span class="galeria-client">Amanda — Mentora</span>
+      </div>
     </div>
   </div>
 </section>
@@ -981,7 +1146,7 @@
     <div class="step">
       <div class="step-num">01</div>
       <div class="step-title">Você envia suas fotos</div>
-      <div class="step-desc">Após o pagamento, você recebe um formulário simples. Envia algumas fotos suas como referência — pode ser selfie, com boa iluminação, sem filtro. Leva menos de 5 minutos.</div>
+      <div class="step-desc">Após o pagamento, você recebe um formulário simples. Envia algumas fotos de referência do seu celular — sem precisar de câmera profissional.</div>
     </div>
     <div class="step">
       <div class="step-num">02</div>
@@ -990,8 +1155,8 @@
     </div>
     <div class="step">
       <div class="step-num">03</div>
-      <div class="step-title">Recebe tudo no drive</div>
-      <div class="step-desc">As fotos aprovadas são entregues via Google Drive, em alta resolução, prontas para usar em qualquer plataforma.</div>
+      <div class="step-title">Recebe tudo em pasta</div>
+      <div class="step-desc">As fotos aprovadas são entregues via Google Drive ou WhatsApp, em alta resolução, prontas para usar em qualquer plataforma.</div>
     </div>
   </div>
   <div class="prazo-bar">
@@ -1007,7 +1172,38 @@
     <div class="prazo-divider"></div>
     <div>
       <div class="prazo-label">Entrega</div>
-      <div class="prazo-val">Google Drive</div>
+      <div class="prazo-val">Google Drive ou WhatsApp</div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section class="section-paraquem">
+  <div class="paraquem-header">
+    <div class="section-label">Para quem é</div>
+    <h2 class="paraquem-headline">Ideal para quem usa a imagem para vender</h2>
+  </div>
+  <div class="paraquem-grid">
+    <div class="paraquem-card">
+      <div class="paraquem-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(153,109,81,0.7)" stroke-width="1.5"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      </div>
+      <div class="paraquem-title">Prestadores de serviços</div>
+      <div class="paraquem-desc">Advogados, dentistas, psicólogos, médicos, consultores. Seu cliente decide se confia em você antes de te ouvir. Sua imagem precisa transmitir isso primeiro.</div>
+    </div>
+    <div class="paraquem-card">
+      <div class="paraquem-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(153,109,81,0.7)" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      </div>
+      <div class="paraquem-title">Criadores e mentores</div>
+      <div class="paraquem-desc">Infoprodutores, coaches e mentores. Você produz conteúdo com frequência e não pode aparecer sempre com as mesmas fotos. Consistência visual é parte da autoridade.</div>
+    </div>
+    <div class="paraquem-card">
+      <div class="paraquem-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(153,109,81,0.7)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="paraquem-title">Experts de marketing digital</div>
+      <div class="paraquem-desc">Especialistas que constroem autoridade pela própria imagem. Você já sabe que imagem vende. O problema é ter volume suficiente para sustentar o ritmo que você já impõe.</div>
     </div>
   </div>
 </section>
@@ -1019,21 +1215,6 @@
     <h2 class="planos-headline">Faça sua escolha</h2>
   </div>
   <div class="planos-grid">
-
-    <div class="plano-card">
-      <div class="plano-name">Iniciante</div>
-      <div class="plano-price">R$ 99,90</div>
-      <div class="plano-per">R$ 19,98 por foto</div>
-      <div class="plano-divider"></div>
-      <ul class="plano-features">
-        <li>5 fotos profissionais com IA</li>
-        <li>Estilo Studio profissional</li>
-        <li>Fotos em 2K</li>
-        <li>Entrega em até 48h</li>
-      </ul>
-      <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20o%20plano%20Iniciante%20por%20R%2499%2C90" class="plano-cta" target="_blank">Quero este plano</a>
-    </div>
-
     <div class="plano-card">
       <div class="plano-name">Profissional</div>
       <div class="plano-price">R$ 247,90</div>
@@ -1047,7 +1228,6 @@
       </ul>
       <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20o%20plano%20Profissional%20por%20R%24247%2C90" class="plano-cta" target="_blank">Quero este plano</a>
     </div>
-
     <div class="plano-card featured">
       <div class="plano-badge">Recomendado</div>
       <div class="plano-name">Mentor</div>
@@ -1062,7 +1242,6 @@
       </ul>
       <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20o%20plano%20Mentor%20por%20R%24397%2C90" class="plano-cta" target="_blank">Quero este plano</a>
     </div>
-
     <div class="plano-card">
       <div class="plano-name">Expert</div>
       <div class="plano-price">R$ 897,90</div>
@@ -1073,71 +1252,65 @@
         <li>5 estilos de foto</li>
         <li>Fotos em 2K e 4K</li>
         <li>Fotos organizadas por função de uso</li>
-        <li>PDF de direcionamento estratégico</li>
+        <li>Para quem produz conteúdo em escala</li>
       </ul>
       <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20o%20plano%20Expert%20por%20R%24897%2C90" class="plano-cta" target="_blank">Quero este plano</a>
     </div>
-
   </div>
-</section>
-
-<!-- PARA QUEM -->
-<section class="section-paraquem">
-  <div class="paraquem-header">
-    <div class="section-label">Para quem é</div>
-    <h2 class="paraquem-headline">Ideal para quem usa a imagem para vender</h2>
-  </div>
-  <div class="paraquem-grid">
-    <div class="paraquem-card">
-      <div class="paraquem-icon">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.6)" stroke-width="1.5"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-      </div>
-      <div class="paraquem-title">Profissionais liberais</div>
-      <div class="paraquem-desc">Advogados, dentistas, psicólogos, médicos, consultores — que precisam transmitir credibilidade antes mesmo da conversa.</div>
-    </div>
-    <div class="paraquem-card">
-      <div class="paraquem-icon">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.6)" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-      </div>
-      <div class="paraquem-title">Criadores e mentores</div>
-      <div class="paraquem-desc">Infoprodutores, coaches e mentores que precisam de volume de imagens para manter presença consistente nas redes.</div>
-    </div>
-    <div class="paraquem-card">
-      <div class="paraquem-icon">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.6)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <div class="paraquem-title">Profissionais de estética</div>
-      <div class="paraquem-desc">Lash designers, manicures e especialistas em harmonização facial que constroem autoridade pela própria imagem.</div>
-    </div>
+  <div class="plano-iniciante">
+    <p class="plano-iniciante-text">Quer começar com menos comprometimento? O plano Iniciante entrega 5 fotos profissionais com IA por R$99,90. Se for o seu caso, clique no botão ao lado.</p>
+    <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20o%20plano%20Iniciante%20por%20R%2499%2C90" class="plano-iniciante-cta" target="_blank">Entrar em contato →</a>
   </div>
 </section>
 
 <!-- DEPOIMENTOS -->
 <section class="section-depo" id="depoimentos">
   <div class="depo-header">
-    <div class="section-label">Quem já usou</div>
+    <div class="section-label">Quem já comprou</div>
     <h2 class="depo-headline">O que dizem os clientes</h2>
   </div>
   <div class="depo-grid">
     <div class="depo-card">
       <div class="depo-quote">"</div>
-      <p class="depo-text">Adicione aqui o depoimento real de um cliente. Quanto mais específico e com resultado concreto, melhor converte.</p>
+      <p class="depo-text">Achei que ficaram incríveis. A criatividade e a imagem pessoal dispostas nas fotos impulsionaram uma ideia de elegância e poder. Eu amei.</p>
       <div class="depo-author">
-        <div class="depo-avatar">AB</div>
+        <div class="depo-avatar">PO</div>
         <div>
-          <div class="depo-name">Nome do Cliente</div>
-          <div class="depo-role">Profissão</div>
+          <div class="depo-name">Pollyana</div>
+          <div class="depo-role">Consultoria Oufativa</div>
         </div>
       </div>
     </div>
     <div class="depo-card">
       <div class="depo-quote">"</div>
-      <p class="depo-text">Adicione aqui o depoimento real de um cliente. Use as avaliações e feedbacks que você já coletou na fase alpha do produto.</p>
+      <p class="depo-text">Amei demais o resultado das fotos, ficou muito real! Minha mãe até achou que era um ensaio em estúdio mesmo kkk.</p>
       <div class="depo-author">
-        <div class="depo-avatar">CD</div>
+        <div class="depo-avatar">LE</div>
         <div>
-          <div class="depo-name">Nome do Cliente</div>
-          <div class="depo-role">Profissão</div>
+          <div class="depo-name">Leandro</div>
+          <div class="depo-role">Assessor de Imprensa</div>
+        </div>
+      </div>
+    </div>
+    <div class="depo-card">
+      <div class="depo-quote">"</div>
+      <p class="depo-text">Quando vi o resultado fiquei em choque, vi que valeu mais do que o valor que paguei.</p>
+      <div class="depo-author">
+        <div class="depo-avatar">TH</div>
+        <div>
+          <div class="depo-name">Thalyta</div>
+          <div class="depo-role">Fisioterapeuta e Massoterapia</div>
+        </div>
+      </div>
+    </div>
+    <div class="depo-card">
+      <div class="depo-quote">"</div>
+      <p class="depo-text">Muito foda!! Deu vontade de fazer mais, tá muito muito massa, agilidade, e foi muito rápido. Gostei muito!! Irei fazer outras com certeza.</p>
+      <div class="depo-author">
+        <div class="depo-avatar">SA</div>
+        <div>
+          <div class="depo-name">Sarha Miranda</div>
+          <div class="depo-role">Bancária</div>
         </div>
       </div>
     </div>
@@ -1145,10 +1318,21 @@
       <div class="depo-quote">"</div>
       <p class="depo-text">Adicione aqui o depoimento real de um cliente. Print de WhatsApp ou story de resultado também funciona muito bem nesta seção.</p>
       <div class="depo-author">
-        <div class="depo-avatar">EF</div>
+        <div class="depo-avatar">AP</div>
         <div>
-          <div class="depo-name">Nome do Cliente</div>
-          <div class="depo-role">Profissão</div>
+          <div class="depo-name">Amanda Pinheiro</div>
+          <div class="depo-role">Mentora e Copywriter</div>
+        </div>
+      </div>
+    </div>
+    <div class="depo-card">
+      <div class="depo-quote">"</div>
+      <p class="depo-text">Adicione aqui o depoimento real de um cliente. Print de WhatsApp ou story de resultado também funciona muito bem nesta seção.</p>
+      <div class="depo-author">
+        <div class="depo-avatar">WC</div>
+        <div>
+          <div class="depo-name">Wendy Cardoso</div>
+          <div class="depo-role">Designer de Jardins</div>
         </div>
       </div>
     </div>
@@ -1157,22 +1341,42 @@
 
 <!-- CTA FINAL -->
 <section class="section-cta-final">
-  <div class="cta-eyebrow">Pronto para começar?</div>
+  <div class="cta-eyebrow">VOCÊ NÃO PRECISA DE MAIS UM ENSAIO</div>
   <h2 class="cta-headline">Sua presença digital merece uma imagem à altura.</h2>
-  <p class="cta-sub">Mande uma mensagem no WhatsApp e receba as instruções para começar. Em até 48 horas suas fotos profissionais estarão prontas.</p>
+  <p class="cta-sub">Manda uma mensagem no WhatsApp e mude como as pessoas te veem hoje.</p>
   <div class="cta-btn-wrap">
     <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20saber%20mais%20sobre%20as%20fotos%20com%20IA" class="btn-large" target="_blank">
       Falar no WhatsApp
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
-  <p class="cta-note">Atendimento via WhatsApp · Pagamento por Pix ou transferência</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">tharssys</div>
-  <div class="footer-copy">© 2025 — Fotos profissionais com IA</div>
+  <div class="footer-logo">
+    <svg viewBox="60 248 666 84" fill="#F7F3EE" xmlns="http://www.w3.org/2000/svg">
+      <g>
+        <path d="M78.34,255.53v70.08h-12.85v-70.08h12.85Z"/>
+        <path d="M87.47,255.53h25.27l13.49,64.67h1.7l13.06-64.67h25.91l1.06,70.08h-12.85l-1.06-63.6h-1.59l-13.06,63.6h-24.63l-13.27-63.6h-1.27l-1.06,63.6h-12.74l1.06-70.08Z"/>
+        <path d="M199.4,255.53h25.06l23.47,70.08h-14.02l-7.86-21.98h-28.46l-7.54,21.98h-14.02l23.36-70.08ZM222.55,291.21l-9.87-30.16h-1.49l-9.88,30.16h21.24Z"/>
+        <path d="M302.94,325.61v-13.8h-1.27c-1.49,9.13-9.24,14.87-20.71,14.87-19.33,0-32.49-14.76-32.49-36s14.02-36.1,35.15-36.1c19.64,0,30.47,10.41,31.54,26.23h-12.64c-.85-9.98-8.6-13.8-18.9-13.8-13.17,0-22.51,9.13-22.51,23.68s9.34,23.47,22.51,23.47c12,0,19.33-5.1,19.33-13.06v-2.02h-22.51v-12.42h35.36v38.97h-12.85Z"/>
+        <path d="M395.43,290.57c0,21.02-13.91,36.1-35.78,36.1s-35.78-15.08-35.78-36.1,13.8-36.1,35.78-36.1,35.78,14.97,35.78,36.1ZM336.71,290.57c0,14.87,8.6,23.57,22.94,23.57,13.48,0,22.83-8.81,22.83-23.57s-9.34-23.68-22.83-23.68c-14.33,0-22.94,8.81-22.94,23.68Z"/>
+      </g>
+      <g>
+        <path d="M432.85,312.67v-34.67h11.34c2.71,0,4.94.45,6.71,1.36,1.77.91,3.07,2.12,3.91,3.64.84,1.52,1.26,3.25,1.26,5.2s-.42,3.59-1.26,5.13c-.84,1.54-2.14,2.76-3.89,3.66-1.75.91-4,1.36-6.74,1.36h-7.18v14.31h-4.16ZM437.01,294.84h7.08c2.77,0,4.75-.6,5.94-1.81,1.19-1.2,1.78-2.81,1.78-4.83,0-2.15-.59-3.8-1.78-4.98-1.19-1.17-3.17-1.76-5.94-1.76h-7.08v13.37Z"/>
+        <path d="M461.57,312.67v-34.67h11.19c2.71,0,4.92.45,6.64,1.36,1.72.91,2.99,2.12,3.81,3.64.82,1.52,1.24,3.24,1.24,5.15s-.42,3.55-1.26,5.1c-.84,1.55-2.14,2.79-3.89,3.71-1.75.92-4,1.39-6.74,1.39h-6.83v14.31h-4.16ZM465.73,295.09h6.74c2.64,0,4.58-.64,5.82-1.93s1.86-2.94,1.86-4.95-.6-3.67-1.81-4.88c-1.21-1.2-3.18-1.81-5.92-1.81h-6.69v13.57ZM479.9,312.67l-7.63-15.5h4.66l7.87,15.5h-4.9Z"/>
+        <path d="M506.44,313.26c-3.34,0-6.26-.75-8.79-2.25s-4.49-3.6-5.89-6.29c-1.4-2.69-2.11-5.82-2.11-9.38s.7-6.64,2.11-9.34c1.4-2.69,3.37-4.8,5.89-6.31,2.53-1.52,5.46-2.28,8.79-2.28s6.36.76,8.89,2.28c2.53,1.52,4.48,3.62,5.87,6.31s2.08,5.8,2.08,9.34-.69,6.69-2.08,9.38-3.34,4.79-5.87,6.29-5.49,2.25-8.89,2.25ZM506.44,309.6c2.51,0,4.71-.57,6.61-1.71,1.9-1.14,3.37-2.77,4.41-4.9,1.04-2.13,1.56-4.68,1.56-7.65s-.52-5.52-1.56-7.65c-1.04-2.13-2.51-3.76-4.41-4.88-1.9-1.12-4.1-1.68-6.61-1.68s-4.66.56-6.56,1.68c-1.9,1.12-3.37,2.75-4.41,4.88s-1.56,4.68-1.56,7.65.52,5.52,1.56,7.65,2.51,3.76,4.41,4.9c1.9,1.14,4.09,1.71,6.56,1.71Z"/>
+        <path d="M535.71,312.67v-31.25h-10.35v-3.42h24.86v3.42h-10.35v31.25h-4.16Z"/>
+        <path d="M569.04,313.26c-3.34,0-6.26-.75-8.79-2.25s-4.49-3.6-5.89-6.29c-1.4-2.69-2.11-5.82-2.11-9.38s.7-6.64,2.11-9.34c1.4-2.69,3.37-4.8,5.89-6.31,2.53-1.52,5.46-2.28,8.79-2.28s6.36.76,8.89,2.28c2.53,1.52,4.48,3.62,5.87,6.31s2.08,5.8,2.08,9.34-.69,6.69-2.08,9.38-3.34,4.79-5.87,6.29-5.49,2.25-8.89,2.25ZM569.04,309.6c2.51,0,4.71-.57,6.61-1.71,1.9-1.14,3.37-2.77,4.41-4.9,1.04-2.13,1.56-4.68,1.56-7.65s-.52-5.52-1.56-7.65c-1.04-2.13-2.51-3.76-4.41-4.88-1.9-1.12-4.1-1.68-6.61-1.68s-4.66.56-6.56,1.68c-1.9,1.12-3.37,2.75-4.41,4.88s-1.56,4.68-1.56,7.65.52,5.52,1.56,7.65,2.51,3.76,4.41,4.9c1.9,1.14,4.09,1.71,6.56,1.71Z"/>
+        <path d="M607.02,313.26c-3.37,0-6.28-.75-8.74-2.25-2.46-1.5-4.35-3.6-5.67-6.29-1.32-2.69-1.98-5.82-1.98-9.38s.66-6.69,1.98-9.38c1.32-2.69,3.21-4.79,5.67-6.29,2.46-1.5,5.37-2.25,8.74-2.25,3.96,0,7.18.94,9.66,2.82,2.48,1.88,4.06,4.54,4.75,7.97h-4.61c-.53-2.15-1.6-3.87-3.22-5.17-1.62-1.3-3.81-1.96-6.59-1.96-2.44,0-4.58.57-6.41,1.71s-3.24,2.77-4.23,4.9-1.49,4.68-1.49,7.65.5,5.52,1.49,7.65,2.4,3.76,4.23,4.9,3.97,1.71,6.41,1.71c2.77,0,4.97-.64,6.59-1.91,1.62-1.27,2.69-2.96,3.22-5.08h4.61c-.69,3.34-2.28,5.94-4.75,7.83-2.48,1.88-5.7,2.82-9.66,2.82Z"/>
+        <path d="M642.93,313.26c-3.34,0-6.26-.75-8.79-2.25s-4.49-3.6-5.89-6.29c-1.4-2.69-2.11-5.82-2.11-9.38s.7-6.64,2.11-9.34c1.4-2.69,3.37-4.8,5.89-6.31,2.53-1.52,5.46-2.28,8.79-2.28s6.36.76,8.89,2.28c2.53,1.52,4.48,3.62,5.87,6.31s2.08,5.8,2.08,9.34-.69,6.69-2.08,9.38-3.34,4.79-5.87,6.29-5.49,2.25-8.89,2.25ZM642.93,309.6c2.51,0,4.71-.57,6.61-1.71,1.9-1.14,3.37-2.77,4.41-4.9,1.04-2.13,1.56-4.68,1.56-7.65s-.52-5.52-1.56-7.65c-1.04-2.13-2.51-3.76-4.41-4.88-1.9-1.12-4.1-1.68-6.61-1.68s-4.66.56-6.56,1.68c-1.9,1.12-3.37,2.75-4.41,4.88s-1.56,4.68-1.56,7.65.52,5.52,1.56,7.65,2.51,3.76,4.41,4.9c1.9,1.14,4.09,1.71,6.56,1.71Z"/>
+        <path d="M665.86,312.67v-34.67h4.16v31.35h16.14v3.32h-20.3Z"/>
+        <path d="M704.19,313.26c-3.34,0-6.26-.75-8.79-2.25s-4.49-3.6-5.89-6.29c-1.4-2.69-2.11-5.82-2.11-9.38s.7-6.64,2.11-9.34c1.4-2.69,3.37-4.8,5.89-6.31,2.53-1.52,5.46-2.28,8.79-2.28s6.36.76,8.89,2.28c2.53,1.52,4.48,3.62,5.87,6.31s2.08,5.8,2.08,9.34-.69,6.69-2.08,9.38-3.34,4.79-5.87,6.29-5.49,2.25-8.89,2.25ZM704.19,309.6c2.51,0,4.71-.57,6.61-1.71,1.9-1.14,3.37-2.77,4.41-4.9,1.04-2.13,1.56-4.68,1.56-7.65s-.52-5.52-1.56-7.65c-1.04-2.13-2.51-3.76-4.41-4.88-1.9-1.12-4.1-1.68-6.61-1.68s-4.66.56-6.56,1.68c-1.9,1.12-3.37,2.75-4.41,4.88s-1.56,4.68-1.56,7.65.52,5.52,1.56,7.65,2.51,3.76,4.41,4.9c1.9,1.14,4.09,1.71,6.56,1.71Z"/>
+      </g>
+    </svg>
+  </div>
+  <div class="footer-copy">© 2026 — IMAGO protocolo</div>
 </footer>
 
 </body>
