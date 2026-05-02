@@ -120,26 +120,17 @@
     margin-top: -90px;
     overflow: hidden;
     min-height: 100vh;
-    padding-bottom: 9rem;
     background: var(--dark);
   }
 
   .hero-bg {
     position: absolute;
-    inset: 0;
-    z-index: 0;
-  }
-
-  .hero-bg::after {
-    content: '';
-    position: absolute;
+    top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
-    height: 220px;
-    background: linear-gradient(to bottom, transparent, var(--dark));
-    z-index: 2;
-    pointer-events: none;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(100%, 1440px);
+    z-index: 0;
   }
 
   .hero-slide {
@@ -428,11 +419,8 @@
      LOGO DIVIDER
   ================================ */
   .logo-divider {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
+    position: relative;
+    z-index: 2;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 3rem;
@@ -1204,32 +1192,32 @@
       </g>
     </svg>
   </div>
-</div>
 
-<!-- DOR -->
-<section class="section-dor">
-  <div class="section-label">os problemas</div>
-  <h2 class="dor-headline">Se você usa sua imagem para vender,<br>provavelmente já sentiu isso</h2>
-  <div class="dor-grid">
-    <div class="dor-item">
-      <div class="dor-icon"></div>
-      <div class="dor-text">Um novo ensaio fotográfico nem sempre compensa — é logística, custo e tempo.</div>
+  <!-- DOR -->
+  <section class="section-dor">
+    <div class="section-label">os problemas</div>
+    <h2 class="dor-headline">Se você usa sua imagem para vender,<br>provavelmente já sentiu isso</h2>
+    <div class="dor-grid">
+      <div class="dor-item">
+        <div class="dor-icon"></div>
+        <div class="dor-text">Um novo ensaio fotográfico nem sempre compensa — é logística, custo e tempo.</div>
+      </div>
+      <div class="dor-item">
+        <div class="dor-icon"></div>
+        <div class="dor-text">Falta variedade para criar conteúdo com consistência e manter um posicionamento de imagem sólido.</div>
+      </div>
+      <div class="dor-item">
+        <div class="dor-icon"></div>
+        <div class="dor-text">Suas fotos acabam rápido e você fica repetindo as mesmas imagens.</div>
+      </div>
+      <div class="dor-item">
+        <div class="dor-icon"></div>
+        <div class="dor-text">Sua imagem atual não acompanha o nível do serviço que você entrega.</div>
+      </div>
     </div>
-    <div class="dor-item">
-      <div class="dor-icon"></div>
-      <div class="dor-text">Falta variedade para criar conteúdo com consistência e manter um posicionamento de imagem sólido.</div>
-    </div>
-    <div class="dor-item">
-      <div class="dor-icon"></div>
-      <div class="dor-text">Suas fotos acabam rápido e você fica repetindo as mesmas imagens.</div>
-    </div>
-    <div class="dor-item">
-      <div class="dor-icon"></div>
-      <div class="dor-text">Sua imagem atual não acompanha o nível do serviço que você entrega.</div>
-    </div>
-  </div>
-  <p class="dor-footer">A maioria dos profissionais continua preso nesse ciclo porque acha que a única saída é marcar outro ensaio. <strong>NÃO É!</strong></p>
-</section>
+    <p class="dor-footer">A maioria dos profissionais continua preso nesse ciclo porque acha que a única saída é marcar outro ensaio. <strong>NÃO É!</strong></p>
+  </section>
+</div>
 
 <!-- GALERIA -->
 <section class="section-galeria" id="resultados">
