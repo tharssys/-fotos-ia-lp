@@ -409,6 +409,32 @@
   }
 
   /* ================================
+     LOGO DIVIDER
+  ================================ */
+  .logo-divider {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding: 5rem 0 0;
+    background: var(--bg);
+  }
+
+  .logo-divider-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(5rem, 15vw, 14rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: rgba(247, 243, 238, 0.18);
+    white-space: nowrap;
+    margin: 0;
+    line-height: 1;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+    mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+    user-select: none;
+    pointer-events: none;
+  }
+
+  /* ================================
      DOR SECTION
   ================================ */
   .section-dor {
@@ -1134,6 +1160,11 @@
       </div>
     </div>
   </section>
+</div>
+
+<!-- LOGO DIVIDER -->
+<div class="logo-divider">
+  <p class="logo-divider-text">IMAGO protocolo</p>
 </div>
 
 <!-- DOR -->
