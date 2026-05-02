@@ -412,9 +412,13 @@
      LOGO DIVIDER
   ================================ */
   .logo-divider {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
     max-width: 1440px;
-    margin: -4rem auto 0;
+    margin: 0 auto;
     padding: 0 3rem;
   }
 
@@ -1166,10 +1170,8 @@
     </div>
   </section>
   <div class="hero-overlay-bottom"></div>
-</div>
-
-<!-- LOGO DIVIDER -->
-<div class="logo-divider">
+  <!-- LOGO DIVIDER -->
+  <div class="logo-divider">
     <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="65 252 660 80">
       <defs>
         <linearGradient id="logoGrad" x1="0" y1="252" x2="0" y2="332" gradientUnits="userSpaceOnUse">
@@ -1197,6 +1199,7 @@
       </g>
     </svg>
   </div>
+</div>
 
 <!-- DOR -->
 <section class="section-dor">
