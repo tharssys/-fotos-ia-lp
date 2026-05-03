@@ -597,10 +597,70 @@
   .galeria-item {
     width: 287px;
     height: 613px;
-    border-radius: 3px;
+    border-radius: 14px;
     overflow: hidden;
     position: relative;
     background: #3A302A;
+  }
+
+  .galeria-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+  }
+
+  .galeria-photo.active { opacity: 1; }
+
+  .galeria-click-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 38px;
+    height: 38px;
+    background: rgba(23,20,18,0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(247,243,238,0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    color: var(--cream);
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .galeria-click-btn:hover { background: rgba(23,20,18,0.8); transform: scale(1.06); }
+  .galeria-click-btn:active { transform: scale(0.93); }
+
+  .galeria-photo-dots {
+    position: absolute;
+    top: 1.1rem;
+    left: 1rem;
+    display: flex;
+    gap: 4px;
+    z-index: 10;
+  }
+
+  .galeria-photo-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(247,243,238,0.3);
+    transition: all 0.25s;
+  }
+
+  .galeria-photo-dot.active {
+    background: var(--cream);
+    width: 14px;
+    border-radius: 3px;
   }
 
   .galeria-item .overlay {
@@ -612,6 +672,7 @@
     align-items: flex-start;
     justify-content: flex-end;
     padding: 1.2rem;
+    z-index: 1;
   }
 
   .galeria-client {
@@ -1301,22 +1362,25 @@
   </div>
   <div class="galeria-grid">
     <div class="galeria-card-wrap">
-      <div class="galeria-item">
-        <div class="galeria-placeholder">
-          <div class="ph-area">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(153,109,81,0.3)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          </div>
-          <span class="ph-label">Pollyana</span>
+      <div class="galeria-item" id="card-pollyana">
+        <img class="galeria-photo active" src="../../Polly/37.png" alt="Pollyana">
+        <img class="galeria-photo" src="../../Polly/F19.png" alt="Pollyana">
+        <img class="galeria-photo" src="../../Polly/F29.png" alt="Pollyana">
+        <img class="galeria-photo" src="../../Polly/F18.png" alt="Pollyana">
+        <div class="galeria-photo-dots">
+          <div class="galeria-photo-dot active"></div>
+          <div class="galeria-photo-dot"></div>
+          <div class="galeria-photo-dot"></div>
+          <div class="galeria-photo-dot"></div>
         </div>
+        <button class="galeria-click-btn" onclick="nextGaleriaPhoto('card-pollyana')" aria-label="Ver próxima foto">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
         <div class="overlay">
           <span class="galeria-client">Pollyana — Consultora de Imagem</span>
           <p class="galeria-depo">Estava construindo seu posicionamento e precisava de fotos que dessem seriedade a esse processo.</p>
           <span class="galeria-ia">gerado com IA</span>
         </div>
-      </div>
-      <div class="galeria-tags">
-        <div class="galeria-tag">Consultora</div>
-        <div class="galeria-tag">Branding pessoal</div>
       </div>
     </div>
     <div class="galeria-card-wrap">
@@ -1333,10 +1397,6 @@
           <span class="galeria-ia">gerado com IA</span>
         </div>
       </div>
-      <div class="galeria-tags">
-        <div class="galeria-tag">Jornalismo</div>
-        <div class="galeria-tag">LinkedIn</div>
-      </div>
     </div>
     <div class="galeria-card-wrap">
       <div class="galeria-item">
@@ -1352,10 +1412,6 @@
           <span class="galeria-ia">gerado com IA</span>
         </div>
       </div>
-      <div class="galeria-tags">
-        <div class="galeria-tag">Copywriter</div>
-        <div class="galeria-tag">Instagram</div>
-      </div>
     </div>
     <div class="galeria-card-wrap">
       <div class="galeria-item">
@@ -1370,10 +1426,6 @@
           <p class="galeria-depo">Agência rodando. Perfil com engajamento. Precisa de um banco de imagens à altura disso tudo.</p>
           <span class="galeria-ia">gerado com IA</span>
         </div>
-      </div>
-      <div class="galeria-tags">
-        <div class="galeria-tag">Mentora</div>
-        <div class="galeria-tag">LinkedIn</div>
       </div>
     </div>
   </div>
@@ -1624,6 +1676,18 @@
 </footer>
 
 <script>
+  function nextGaleriaPhoto(cardId) {
+    const card = document.getElementById(cardId);
+    const photos = card.querySelectorAll('.galeria-photo');
+    const dots   = card.querySelectorAll('.galeria-photo-dot');
+    const active = [...photos].findIndex(p => p.classList.contains('active'));
+    photos[active].classList.remove('active');
+    dots[active].classList.remove('active');
+    const next = (active + 1) % photos.length;
+    photos[next].classList.add('active');
+    dots[next].classList.add('active');
+  }
+
   const slides = document.querySelectorAll('.hero-slide');
   const thumbs = document.querySelectorAll('.hero-thumb');
   const dots   = document.querySelectorAll('.hero-dot');
