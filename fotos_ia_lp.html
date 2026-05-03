@@ -551,11 +551,31 @@
     background: transparent;
     border-top: 1px solid rgba(247,243,238,0.4);
     border-bottom: 1px solid rgba(247,243,238,0.4);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-galeria::before {
+    content: '';
+    position: absolute;
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #DA471C 0%, #E6BC46 45%, transparent 70%);
+    filter: blur(110px);
+    opacity: 0.28;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
   }
 
   .galeria-header {
     max-width: 1200px;
     margin: 0 auto 3rem;
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -585,6 +605,8 @@
     gap: 12px;
     justify-content: center;
     align-items: flex-start;
+    position: relative;
+    z-index: 1;
   }
 
   .galeria-card-wrap {
