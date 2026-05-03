@@ -455,14 +455,14 @@
     color: #A6ABAF;
     margin-bottom: 1.2rem;
     background: rgba(255, 255, 255, 0.12);
-    padding: 0.35rem 0.9rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 999px;
   }
 
   .dor-headline {
     font-family: 'Blauer Nue', sans-serif;
-    font-size: clamp(1.6rem, 3vw, 2.6rem);
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 400;
     line-height: 1.2;
     margin-bottom: 2rem;
     color: var(--cream);
@@ -476,13 +476,16 @@
   .dor-grid {
     display: flex;
     flex-direction: column;
-    gap: 1.1rem;
+    gap: 0.75rem;
   }
 
   .dor-item {
     display: flex;
     gap: 1rem;
     align-items: flex-start;
+    background: rgba(255,255,255,0.05);
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
   }
 
   .dor-icon {
@@ -490,11 +493,11 @@
     height: 6px;
     border-radius: 50%;
     background: var(--accent);
-    margin-top: 0.55rem;
+    margin-top: 0.45rem;
     flex-shrink: 0;
   }
 
-  .dor-text { font-size: 0.9rem; color: rgba(247,243,238,0.7); line-height: 1.6; }
+  .dor-text { font-size: 0.9rem; color: rgba(247,243,238,0.7); line-height: 1.5; }
 
   .dor-right {
     position: relative;
@@ -509,24 +512,25 @@
     position: absolute;
     inset: 0;
     background-image: url('../RECURSOS/DOR IMAGEM.png');
-    background-size: auto 100%;
-    background-position: right top;
+    background-size: auto 140%;
+    background-position: center top;
     background-repeat: no-repeat;
   }
 
   .dor-card {
     position: relative;
     z-index: 1;
-    background: linear-gradient(135deg, #DA471C 0%, #371004 100%);
+    background: linear-gradient(135deg, rgba(218,71,28,0.4) 0%, rgba(55,16,4,0.4) 100%);
+    border: 1px solid #D24820;
     border-radius: 12px;
     padding: 1.5rem 1.8rem;
     margin: 1.2rem;
   }
 
   .dor-footer {
-    font-size: 0.9rem;
+    font-size: 21px;
     color: rgba(247,243,238,0.9);
-    line-height: 1.7;
+    line-height: 1.5;
   }
 
   .dor-footer strong { color: var(--cream); font-weight: 600; }
@@ -551,8 +555,8 @@
 
   .galeria-headline {
     font-family: 'Blauer Nue', sans-serif;
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 400;
     max-width: 480px;
     line-height: 1.2;
   }
@@ -655,8 +659,8 @@
 
   .como-headline {
     font-family: 'Blauer Nue', sans-serif;
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 400;
     margin-bottom: 1rem;
   }
 
@@ -725,8 +729,8 @@
 
   .paraquem-headline {
     font-family: 'Blauer Nue', sans-serif;
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 400;
   }
 
   .paraquem-grid {
@@ -775,8 +779,8 @@
 
   .planos-headline {
     font-family: 'Blauer Nue', sans-serif;
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 400;
     margin-bottom: 1rem;
   }
 
@@ -941,8 +945,8 @@
 
   .depo-headline {
     font-family: 'Blauer Nue', sans-serif;
-    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 400;
     margin-bottom: 0.5rem;
   }
 
@@ -1017,8 +1021,8 @@
 
   .cta-headline {
     font-family: 'Blauer Nue', sans-serif;
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 900;
+    font-size: 40px;
+    font-weight: 400;
     line-height: 1.1;
     margin-bottom: 1.5rem;
   }
@@ -1248,7 +1252,7 @@
     <div class="dor-right">
       <div class="dor-right-img"></div>
       <div class="dor-card">
-        <p class="dor-footer">A maioria dos profissionais continua preso nesse ciclo porque acha que a única saída é marcar outro ensaio. <strong>NÃO É!</strong></p>
+        <p class="dor-footer">A maioria dos profissionais continua<br>preso nesse ciclo porque acha que a<br>única saída é marcar outro ensaio. <strong>NÃO É!</strong></p>
       </div>
     </div>
   </section>
