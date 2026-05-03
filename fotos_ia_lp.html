@@ -619,8 +619,9 @@
 
   .galeria-click-btn {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    bottom: 6.5rem;
+    left: 50%;
+    transform: translateX(-50%);
     width: 38px;
     height: 38px;
     background: rgba(23,20,18,0.55);
@@ -637,8 +638,8 @@
     transition: background 0.2s, transform 0.15s;
   }
 
-  .galeria-click-btn:hover { background: rgba(23,20,18,0.8); transform: scale(1.06); }
-  .galeria-click-btn:active { transform: scale(0.93); }
+  .galeria-click-btn:hover { background: rgba(23,20,18,0.8); transform: translateX(-50%) scale(1.06); }
+  .galeria-click-btn:active { transform: translateX(-50%) scale(0.93); }
 
   .galeria-photo-dots {
     position: absolute;
