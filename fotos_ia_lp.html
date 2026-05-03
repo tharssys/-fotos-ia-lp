@@ -712,6 +712,26 @@
     white-space: nowrap;
   }
 
+  .galeria-mini-cards {
+    display: flex;
+    gap: 6px;
+  }
+
+  .galeria-mini-card {
+    width: 110px;
+    height: 81px;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .galeria-mini-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+  }
+
   .galeria-placeholder {
     width: 100%;
     height: 100%;
@@ -1360,7 +1380,7 @@
     <div class="galeria-note">Não é só foto com IA — são fotos profissionais geradas pela Inteligência Artificial utilizando direcionamento criativo de um estúdio de fotografia</div>
   </div>
   <div class="galeria-grid">
-    <div class="galeria-card-wrap">
+    <div class="galeria-card-wrap" style="gap: 8px;">
       <div class="galeria-item" id="card-pollyana">
         <img class="galeria-photo active" src="../../Polly/37.png" alt="Pollyana">
         <img class="galeria-photo" src="../../Polly/F19.png" alt="Pollyana">
@@ -1379,6 +1399,14 @@
           <span class="galeria-client">Pollyana — Consultora de Imagem</span>
           <p class="galeria-depo">Estava construindo seu posicionamento e precisava de fotos que dessem seriedade a esse processo.</p>
           <span class="galeria-ia">gerado com IA</span>
+        </div>
+      </div>
+      <div class="galeria-mini-cards">
+        <div class="galeria-mini-card">
+          <img src="../../Polly/original_1.jpeg" alt="Pollyana original">
+        </div>
+        <div class="galeria-mini-card">
+          <img src="../../Polly/original_2.jpeg" alt="Pollyana original">
         </div>
       </div>
     </div>
