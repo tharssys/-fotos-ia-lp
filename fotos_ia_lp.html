@@ -438,10 +438,13 @@
   .section-dor {
     position: relative;
     z-index: 2;
-    padding: 6rem 2rem;
-    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    padding: 87px 3rem 6rem;
+    max-width: 1440px;
     margin: 0 auto;
-    text-align: center;
   }
 
   .section-label {
@@ -458,28 +461,25 @@
 
   .dor-headline {
     font-family: 'Blauer Nue', sans-serif;
-    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-size: clamp(1.6rem, 3vw, 2.6rem);
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     color: var(--cream);
   }
 
+  .dor-left {
+    display: flex;
+    flex-direction: column;
+  }
+
   .dor-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: var(--light-border);
-    border: 1px solid var(--light-border);
-    border-radius: 4px;
-    overflow: hidden;
-    text-align: left;
-    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
   }
 
   .dor-item {
-    background: var(--mid);
-    padding: 1.5rem 1.8rem;
     display: flex;
     gap: 1rem;
     align-items: flex-start;
@@ -496,13 +496,40 @@
 
   .dor-text { font-size: 0.9rem; color: rgba(247,243,238,0.7); line-height: 1.6; }
 
-  .dor-footer {
-    font-size: 1rem;
-    color: rgba(247,243,238,0.5);
-    line-height: 1.8;
+  .dor-right {
+    position: relative;
+    min-height: 440px;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
   }
 
-  .dor-footer strong { color: var(--cream); font-weight: 500; }
+  .dor-right-img {
+    position: absolute;
+    inset: 0;
+    background-image: url('../RECURSOS/DOR IMAGEM.png');
+    background-size: auto 100%;
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+
+  .dor-card {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #DA471C 0%, #371004 100%);
+    border-radius: 12px;
+    padding: 1.5rem 1.8rem;
+    margin: 1.2rem;
+  }
+
+  .dor-footer {
+    font-size: 0.9rem;
+    color: rgba(247,243,238,0.9);
+    line-height: 1.7;
+  }
+
+  .dor-footer strong { color: var(--cream); font-weight: 600; }
 
   /* ================================
      GALERIA
@@ -1196,27 +1223,34 @@
 
   <!-- DOR -->
   <section class="section-dor">
-    <div class="section-label">os problemas</div>
-    <h2 class="dor-headline">Se você usa sua imagem para vender,<br>provavelmente já sentiu isso</h2>
-    <div class="dor-grid">
-      <div class="dor-item">
-        <div class="dor-icon"></div>
-        <div class="dor-text">Um novo ensaio fotográfico nem sempre compensa — é logística, custo e tempo.</div>
-      </div>
-      <div class="dor-item">
-        <div class="dor-icon"></div>
-        <div class="dor-text">Falta variedade para criar conteúdo com consistência e manter um posicionamento de imagem sólido.</div>
-      </div>
-      <div class="dor-item">
-        <div class="dor-icon"></div>
-        <div class="dor-text">Suas fotos acabam rápido e você fica repetindo as mesmas imagens.</div>
-      </div>
-      <div class="dor-item">
-        <div class="dor-icon"></div>
-        <div class="dor-text">Sua imagem atual não acompanha o nível do serviço que você entrega.</div>
+    <div class="dor-left">
+      <div class="section-label">os problemas</div>
+      <h2 class="dor-headline">Se você usa sua imagem para<br>vender, talvez tenha sentido que:</h2>
+      <div class="dor-grid">
+        <div class="dor-item">
+          <div class="dor-icon"></div>
+          <div class="dor-text">Um novo ensaio fotográfico nem sempre compensa — é logística, custo e tempo.</div>
+        </div>
+        <div class="dor-item">
+          <div class="dor-icon"></div>
+          <div class="dor-text">Falta variedade para criar conteúdo com consistência e manter um posicionamento de imagem sólido.</div>
+        </div>
+        <div class="dor-item">
+          <div class="dor-icon"></div>
+          <div class="dor-text">Suas fotos acabam rápido e você fica repetindo as mesmas imagens.</div>
+        </div>
+        <div class="dor-item">
+          <div class="dor-icon"></div>
+          <div class="dor-text">Sua imagem atual não acompanha o nível do serviço que você entrega.</div>
+        </div>
       </div>
     </div>
-    <p class="dor-footer">A maioria dos profissionais continua preso nesse ciclo porque acha que a única saída é marcar outro ensaio. <strong>NÃO É!</strong></p>
+    <div class="dor-right">
+      <div class="dor-right-img"></div>
+      <div class="dor-card">
+        <p class="dor-footer">A maioria dos profissionais continua preso nesse ciclo porque acha que a única saída é marcar outro ensaio. <strong>NÃO É!</strong></p>
+      </div>
+    </div>
   </section>
 </div>
 
