@@ -1062,6 +1062,37 @@
 
   .plano-card.featured .plano-cta:hover { background: var(--accent-light); }
 
+  .plano-extras {
+    border-top: 1px solid var(--light-border);
+    padding-top: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .plano-extras-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+  }
+
+  .plano-extra-item {
+    font-size: 0.75rem;
+    color: rgba(247,243,238,0.4);
+    padding: 0.18rem 0;
+    display: flex;
+    gap: 0.45rem;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+
+  .plano-extra-item::before {
+    content: '+';
+    color: var(--accent);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
   /* ================================
      DEPOIMENTOS
   ================================ */
@@ -1623,17 +1654,26 @@
   </div>
   <div class="planos-grid">
     <div class="plano-card">
-      <div class="plano-name">Iniciante</div>
-      <div class="plano-price">R$ 99,90</div>
-      <div class="plano-per">R$ 19,98 por foto</div>
+      <div class="plano-name">Pessoal</div>
+      <div class="plano-price">R$ 49,90</div>
+      <div class="plano-per">Para datas comemorativas e casual</div>
       <div class="plano-divider"></div>
       <ul class="plano-features">
-        <li>5 fotos profissionais com IA</li>
-        <li>1 estilo de foto</li>
-        <li>Fotos em 2K</li>
-        <li>Entrega em até 48h</li>
+        <li>Direção criativa personalizada</li>
+        <li>1 sessão com 10 fotos</li>
+        <li>Sessão com 1 a 3 pessoas juntas</li>
+        <li>Imagens em 2K de resolução</li>
+        <li>Até 10 poses</li>
+        <li>Entrega em 48h</li>
+        <li>Fotos 3x4 como cortesia</li>
+        <li>Fotos enviadas via Drive</li>
       </ul>
-      <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20o%20plano%20Iniciante%20por%20R%2499%2C90" class="plano-cta" target="_blank">Quero este plano</a>
+      <div class="plano-extras">
+        <div class="plano-extras-label">Adicionais</div>
+        <div class="plano-extra-item">Fotos extras por R$ 15,00 und.</div>
+        <div class="plano-extra-item">Adicionar + pessoas à sessão: R$ 10,00 por pessoa</div>
+      </div>
+      <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20o%20plano%20Pessoal%20por%20R%2449%2C90" class="plano-cta" target="_blank">Quero este plano</a>
     </div>
     <div class="plano-card">
       <div class="plano-name">Profissional</div>
