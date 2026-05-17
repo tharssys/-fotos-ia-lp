@@ -1013,6 +1013,23 @@
 
   .plano-per { font-size: 0.72rem; color: var(--gray); margin-bottom: 1.5rem; }
 
+  .plano-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 1.5rem;
+  }
+
+  .plano-tag {
+    font-size: 0.68rem;
+    color: var(--gray);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    padding: 0.25rem 0.55rem;
+    white-space: nowrap;
+  }
+
   .plano-divider { height: 1px; background: var(--light-border); margin-bottom: 1.2rem; }
 
   .plano-features { list-style: none; margin-bottom: 2rem; }
@@ -1656,7 +1673,11 @@
     <div class="plano-card">
       <div class="plano-name">Profissional</div>
       <div class="plano-price">R$ 49,90</div>
-      <div class="plano-per">Para ensaios comemorativos, pessoais e profissionais/corporativos</div>
+      <div class="plano-tags">
+        <span class="plano-tag">ensaio comemorativo</span>
+        <span class="plano-tag">ensaio pessoal</span>
+        <span class="plano-tag">ensaio profissional/corporativo</span>
+      </div>
       <div class="plano-divider"></div>
       <ul class="plano-features">
         <li>Direção fotográfica</li>
