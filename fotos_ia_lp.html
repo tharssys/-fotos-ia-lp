@@ -937,7 +937,7 @@
      PLANOS
   ================================ */
   .section-planos {
-    padding: 7rem 2rem;
+    padding: 7rem 3rem;
     background: var(--mid);
     border-top: 1px solid var(--light-border);
   }
@@ -952,10 +952,10 @@
   }
 
   .planos-grid {
-    max-width: 1100px;
-    margin: 0 auto 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 12px;
     align-items: start;
   }
@@ -1061,43 +1061,6 @@
   }
 
   .plano-card.featured .plano-cta:hover { background: var(--accent-light); }
-
-  .plano-iniciante {
-    max-width: 1100px;
-    margin: 0 auto;
-    background: var(--dark);
-    border: 1px solid var(--light-border);
-    border-radius: 4px;
-    padding: 1.5rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-
-  .plano-iniciante-text {
-    font-size: 0.88rem;
-    color: rgba(247,243,238,0.5);
-    line-height: 1.6;
-    max-width: 520px;
-  }
-
-  .plano-iniciante-cta {
-    background: transparent;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    padding: 0.65rem 1.4rem;
-    border-radius: 3px;
-    font-size: 0.82rem;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    transition: all 0.2s;
-    white-space: nowrap;
-  }
-
-  .plano-iniciante-cta:hover { background: rgba(218,71,28,0.08); }
 
   /* ================================
      DEPOIMENTOS
@@ -1660,6 +1623,19 @@
   </div>
   <div class="planos-grid">
     <div class="plano-card">
+      <div class="plano-name">Iniciante</div>
+      <div class="plano-price">R$ 99,90</div>
+      <div class="plano-per">R$ 19,98 por foto</div>
+      <div class="plano-divider"></div>
+      <ul class="plano-features">
+        <li>5 fotos profissionais com IA</li>
+        <li>1 estilo de foto</li>
+        <li>Fotos em 2K</li>
+        <li>Entrega em até 48h</li>
+      </ul>
+      <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20o%20plano%20Iniciante%20por%20R%2499%2C90" class="plano-cta" target="_blank">Quero este plano</a>
+    </div>
+    <div class="plano-card">
       <div class="plano-name">Profissional</div>
       <div class="plano-price">R$ 247,90</div>
       <div class="plano-per">R$ 24,79 por foto</div>
@@ -1700,10 +1676,6 @@
       </ul>
       <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20o%20plano%20Expert%20por%20R%24897%2C90" class="plano-cta" target="_blank">Quero este plano</a>
     </div>
-  </div>
-  <div class="plano-iniciante">
-    <p class="plano-iniciante-text">Quer começar com menos comprometimento? O plano Iniciante entrega 5 fotos profissionais com IA por R$99,90. Se for o seu caso, clique no botão ao lado.</p>
-    <a href="https://wa.me/55SEUNUMERO?text=Oi!%20Quero%20o%20plano%20Iniciante%20por%20R%2499%2C90" class="plano-iniciante-cta" target="_blank">Entrar em contato →</a>
   </div>
 </section>
 
