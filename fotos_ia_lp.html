@@ -964,11 +964,20 @@
     border: 1px solid var(--light-border);
     border-radius: 4px;
     padding: 2rem 1.5rem;
-    transition: border-color 0.2s;
+    transition: border-color 0.25s, transform 0.25s, opacity 0.25s;
     position: relative;
   }
 
-  .plano-card:hover { border-color: rgba(153,109,81,0.45); }
+  .planos-grid:hover .plano-card {
+    transform: scale(0.97);
+    opacity: 0.75;
+  }
+
+  .planos-grid:hover .plano-card:hover {
+    transform: scale(1.03);
+    opacity: 1;
+    border-color: rgba(153,109,81,0.45);
+  }
 
   .plano-card.featured {
     border-color: var(--accent);
