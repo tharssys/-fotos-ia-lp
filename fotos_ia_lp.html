@@ -961,6 +961,18 @@
     align-items: start;
   }
 
+  .plano-col-duplo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-self: stretch;
+  }
+
+  .plano-col-duplo .plano-card {
+    flex: 1;
+    padding: 1.4rem 1.2rem;
+  }
+
   .plano-card {
     background: var(--dark);
     border: 1px solid var(--light-border);
@@ -1703,29 +1715,55 @@
     <h2 class="planos-headline">Faça sua escolha</h2>
   </div>
   <div class="planos-grid">
-    <div class="plano-card">
-      <div class="plano-name">Iniciante</div>
-      <div class="plano-price">R$ 59,90</div>
-      <div class="plano-tags">
-        <span class="plano-tag">ensaio comemorativo</span>
-        <span class="plano-tag">ensaio pessoal</span>
-        <span class="plano-tag">ensaio profissional/corporativo</span>
+    <div class="plano-col-duplo">
+      <div class="plano-card">
+        <div class="plano-name">Profissional normal</div>
+        <div class="plano-price">R$ 59,90</div>
+        <div class="plano-tags">
+          <span class="plano-tag">ensaio comemorativo</span>
+          <span class="plano-tag">ensaio pessoal</span>
+          <span class="plano-tag">ensaio profissional/corporativo</span>
+        </div>
+        <div class="plano-divider"></div>
+        <ul class="plano-features">
+          <li>1 sessão com 10 fotos</li>
+          <li>Sessão com 1 a 2 pessoas</li>
+          <li>Imagens em 2K de resolução</li>
+          <li>Fundo neutro de estúdio</li>
+          <li>Entrega em 48h</li>
+          <li>Fotos enviadas via Drive</li>
+        </ul>
+        <div class="plano-extras">
+          <div class="plano-extras-label">Adicionais</div>
+          <div class="plano-extra-item">Fotos extras por R$ 15,00 und.</div>
+          <div class="plano-extra-item">Adicionar + pessoas à sessão: R$ 10,00 por pessoa</div>
+        </div>
+        <a href="https://wa.me/5586995834805?text=Oi!%20Quero%20o%20plano%20Profissional%20Normal%20por%20R%2459%2C90" class="plano-cta" target="_blank">Quero este plano</a>
       </div>
-      <div class="plano-divider"></div>
-      <ul class="plano-features">
-        <li>1 sessão com 10 fotos</li>
-        <li>Sessão com 1 a 3 pessoas juntas</li>
-        <li>Imagens em 2K de resolução</li>
-        <li>Até 10 poses</li>
-        <li>Entrega em 48h</li>
-        <li>Fotos enviadas via Drive</li>
-      </ul>
-      <div class="plano-extras">
-        <div class="plano-extras-label">Adicionais</div>
-        <div class="plano-extra-item">Fotos extras por R$ 15,00 und.</div>
-        <div class="plano-extra-item">Adicionar + pessoas à sessão: R$ 10,00 por pessoa</div>
+      <div class="plano-card">
+        <div class="plano-name">Profissional avançado</div>
+        <div class="plano-price">R$ 89,90</div>
+        <div class="plano-tags">
+          <span class="plano-tag">ensaio comemorativo</span>
+          <span class="plano-tag">ensaio pessoal</span>
+          <span class="plano-tag">ensaio profissional/corporativo</span>
+        </div>
+        <div class="plano-divider"></div>
+        <ul class="plano-features">
+          <li>1 sessão com 15 fotos</li>
+          <li>1 cenário temático</li>
+          <li>Fotos 3x4 para perfil de cortesia</li>
+          <li>Direção fotográfica</li>
+          <li>Entrega em 48h</li>
+          <li>Fotos enviadas via Drive</li>
+        </ul>
+        <div class="plano-extras">
+          <div class="plano-extras-label">Adicionais</div>
+          <div class="plano-extra-item">Fotos extras por R$ 15,00 und.</div>
+          <div class="plano-extra-item">Adicionar + pessoas à sessão: R$ 10,00 por pessoa</div>
+        </div>
+        <a href="https://wa.me/5586995834805?text=Oi!%20Quero%20o%20plano%20Profissional%20Avan%C3%A7ado%20por%20R%2489%2C90" class="plano-cta" target="_blank">Quero este plano</a>
       </div>
-      <a href="https://wa.me/5586995834805?text=Oi!%20Quero%20o%20plano%20Pessoal%20por%20R%2449%2C90" class="plano-cta" target="_blank">Quero este plano</a>
     </div>
     <div class="plano-card featured">
       <div class="plano-badge">Recomendado</div>
