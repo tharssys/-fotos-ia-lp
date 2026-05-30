@@ -1088,6 +1088,28 @@
     white-space: nowrap;
   }
 
+  .plano-price-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  .plano-price-row .plano-price { margin-bottom: 0; }
+  .plano-price-row .plano-tags {
+    margin-bottom: 0;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .plano-desc {
+    font-size: 0.8rem;
+    color: rgba(247,243,238,0.5);
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
+  }
+
   .plano-divider { height: 1px; background: var(--light-border); margin-bottom: 1.2rem; }
 
   .plano-features { list-style: none; margin-bottom: 2rem; }
@@ -1738,12 +1760,15 @@
     <div class="plano-col-duplo">
       <div class="plano-card">
         <div class="plano-name">PROFESSIONAL standard</div>
-        <div class="plano-price">R$ 69,90</div>
-        <div class="plano-tags">
-          <span class="plano-tag">ensaio comemorativo</span>
-          <span class="plano-tag">ensaio pessoal</span>
-          <span class="plano-tag">ensaio profissional/corporativo</span>
+        <div class="plano-price-row">
+          <div class="plano-price">R$ 69,90</div>
+          <div class="plano-tags">
+            <span class="plano-tag">ensaio comemorativo</span>
+            <span class="plano-tag">ensaio pessoal</span>
+            <span class="plano-tag">ensaio profissional/corporativo</span>
+          </div>
         </div>
+        <p class="plano-desc">Tenha um ensaio completinho e com o profissionalismo necessário. Você envia as fotos e as informações; e nós fazemos o resto.</p>
         <div class="plano-divider"></div>
         <div class="plano-body">
           <ul class="plano-features">
@@ -1757,18 +1782,20 @@
           <div class="plano-extras">
             <div class="plano-extras-label">Adicionais</div>
             <div class="plano-extra-item">Fotos extras por R$ 15,00 und.</div>
-            <div class="plano-extra-item">Adicionar + pessoas à sessão: R$ 10,00 por pessoa</div>
+            <div class="plano-extra-item">Adicionar + pessoas à sessão: R$ 20,00 por pessoa</div>
           </div>
         </div>
         <a href="https://wa.me/5586995834805?text=Oi!%20Quero%20o%20plano%20Profissional%20Normal%20por%20R%2459%2C90" class="plano-cta" target="_blank">Quero este plano</a>
       </div>
       <div class="plano-card">
         <div class="plano-name">PROFESSIONAL advanced</div>
-        <div class="plano-price">R$ 89,90</div>
-        <div class="plano-tags">
-          <span class="plano-tag">ensaio comemorativo</span>
-          <span class="plano-tag">ensaio pessoal</span>
-          <span class="plano-tag">ensaio profissional/corporativo</span>
+        <div class="plano-price-row">
+          <div class="plano-price">R$ 89,90</div>
+          <div class="plano-tags">
+            <span class="plano-tag">ensaio comemorativo</span>
+            <span class="plano-tag">ensaio pessoal</span>
+            <span class="plano-tag">ensaio profissional/corporativo</span>
+          </div>
         </div>
         <div class="plano-divider"></div>
         <div class="plano-body">
@@ -1794,11 +1821,13 @@
     <div class="plano-card featured">
       <div class="plano-badge">Recomendado</div>
       <div class="plano-name">Profissional</div>
-      <div class="plano-price">R$ 119,90</div>
-      <div class="plano-tags">
-        <span class="plano-tag">ensaio comemorativo</span>
-        <span class="plano-tag">ensaio pessoal</span>
-        <span class="plano-tag">ensaio profissional/corporativo</span>
+      <div class="plano-price-row">
+        <div class="plano-price">R$ 119,90</div>
+        <div class="plano-tags">
+          <span class="plano-tag">ensaio comemorativo</span>
+          <span class="plano-tag">ensaio pessoal</span>
+          <span class="plano-tag">ensaio profissional/corporativo</span>
+        </div>
       </div>
       <div class="plano-divider"></div>
       <ul class="plano-features">
@@ -1821,11 +1850,13 @@
     </div>
     <div class="plano-card">
       <div class="plano-name">Expert</div>
-      <div class="plano-price">R$ 239,90</div>
-      <div class="plano-tags">
-        <span class="plano-tag">criadores de conteúdo</span>
-        <span class="plano-tag">mentores</span>
-        <span class="plano-tag">experts</span>
+      <div class="plano-price-row">
+        <div class="plano-price">R$ 239,90</div>
+        <div class="plano-tags">
+          <span class="plano-tag">criadores de conteúdo</span>
+          <span class="plano-tag">mentores</span>
+          <span class="plano-tag">experts</span>
+        </div>
       </div>
       <div class="plano-divider"></div>
       <ul class="plano-features">
