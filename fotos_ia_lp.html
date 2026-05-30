@@ -1028,9 +1028,11 @@
   .plano-card.featured .plano-extras { border-top-color: rgba(255,255,255,0.15); }
 
   .plano-card.featured .plano-tag {
-    background: rgba(0,0,0,0.2);
-    border-color: rgba(255,255,255,0.15);
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.65);
+  }
+
+  .plano-card.featured .plano-tag + .plano-tag::before {
+    color: rgba(255,255,255,0.2);
   }
 
   .plano-badge {
@@ -1073,19 +1075,25 @@
   .plano-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 0;
     margin-bottom: 1.5rem;
+    align-items: center;
   }
 
   .plano-tag {
     font-size: 0.68rem;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--gray);
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 4px;
-    padding: 0.25rem 0.55rem;
+    background: none;
+    border: none;
+    padding: 0;
     white-space: nowrap;
+  }
+
+  .plano-tag + .plano-tag::before {
+    content: ' | ';
+    color: rgba(166,171,175,0.35);
+    margin: 0 0.3rem;
   }
 
   .plano-price-row {
@@ -1099,8 +1107,8 @@
   .plano-price-row .plano-tags {
     margin-bottom: 0;
     justify-content: flex-end;
-    flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   .plano-desc {
